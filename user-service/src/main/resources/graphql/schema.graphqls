@@ -1,0 +1,93 @@
+# GraphQL Schema for Services
+
+# Common Types
+type Person {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    role: String!
+}
+
+type Biologist {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    label: String!
+    admin: Admin!
+    role: String!
+}
+
+type Admin {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    label: String!
+    role: String!
+}
+
+# Input Types
+input PersonInput {
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+    role: String!
+}
+
+input BiologistInput {
+    firstName: String!
+    lastName: String!
+    password: String!
+    email: String!
+    label: String!
+    role: String!
+    admin: AdminInput!
+}
+
+input AdminInput {
+    firstName: String!
+    lastName: String!
+    password: String!
+    email: String!
+    role: String!
+    label: String!
+}
+
+# Query Definitions
+type Query {
+    # Person Queries
+    findAllPersons: [Person]!
+    findPersonById(id: ID!): Person
+    findPersonByEmail(email: String!): Person
+
+    # Biologist Queries
+    findAllBiologists: [Biologist]!
+    findBiologistById(id: ID!): Biologist
+    searchBiologistsByLabel(label: String!): [Biologist]
+    searchBiologistsByLastName(lastName: String!): [Biologist]
+    searchBiologistsAdmin(id: ID!): [Biologist]
+
+    # Admin Queries
+    findAllAdmins: [Admin]!
+    findAdminById(id: ID!): Admin
+}
+
+# Mutation Definitions
+type Mutation {
+    # Person Mutations
+    savePerson(person: PersonInput!): Person
+    updatePerson(id: ID!, person: PersonInput!): Person
+    deletePerson(id: ID!): Boolean
+
+    # Biologist Mutations
+    saveBiologist(biologist: BiologistInput!): Biologist
+    deleteBiologist(id: ID!): Boolean
+    updateBiologist(id: ID!, biologist: BiologistInput!): Biologist
+
+    # Admin Mutations
+    saveAdmin(admin: AdminInput!): Admin
+    deleteAdmin(id: ID!): Boolean
+    updateAdmin(id: ID!, admin: AdminInput!): Admin
+}
