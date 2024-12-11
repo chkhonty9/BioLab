@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseInMemoryDatabase("MaterielDB")); // For testing with an in-memory database
+builder.Services.AddControllers();  
 
 builder.Services.AddScoped<MaterielRepository>();
 builder.Services.AddScoped<MaterielService>();
@@ -40,6 +41,8 @@ app.MapGraphQL();
 
 // Enable HTTPS redirection
 app.UseHttpsRedirection();
+
+app.MapControllers();
 
 // Ensure app runs correctly
 app.Run();
