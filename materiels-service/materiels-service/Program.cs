@@ -13,8 +13,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseInMemoryDatabase("MaterielDB")); // For testing with an in-memory database
 builder.Services.AddControllers();  
 
-builder.Services.AddScoped<MaterielRepository>();
-builder.Services.AddScoped<MaterielService>();
+builder.Services.AddScoped<IMaterielRepository, MaterielRepository>();
+builder.Services.AddScoped<IMaterielService, MaterielService>();
 
 // Add GraphQL Server configuration
 builder.Services
