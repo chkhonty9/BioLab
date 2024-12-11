@@ -1,0 +1,3424 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "ChilliCream.Nitro.App/20.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Yarp.ReverseProxy": "2.2.0"
+        },
+        "compile": {
+          "lib/net8.0/ChilliCream.Nitro.App.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/ChilliCream.Nitro.App.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "GreenDonut/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.ObjectPool": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/GreenDonut.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/GreenDonut.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Authorization": "14.2.0",
+          "HotChocolate.CostAnalysis": "14.2.0",
+          "HotChocolate.Execution": "14.2.0",
+          "HotChocolate.Fetching": "14.2.0",
+          "HotChocolate.Pagination.Mappings": "14.2.0",
+          "HotChocolate.Types": "14.2.0",
+          "HotChocolate.Types.CursorPagination": "14.2.0",
+          "HotChocolate.Types.Mutations": "14.2.0",
+          "HotChocolate.Types.OffsetPagination": "14.2.0",
+          "HotChocolate.Types.Queries": "14.2.0",
+          "HotChocolate.Validation": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Abstractions/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Primitives": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.AspNetCore/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "ChilliCream.Nitro.App": "20.0.2",
+          "HotChocolate": "14.2.0",
+          "HotChocolate.Subscriptions.InMemory": "14.2.0",
+          "HotChocolate.Transport.Sockets": "14.2.0",
+          "HotChocolate.Types.Scalars.Upload": "14.2.0",
+          "HotChocolate.Utilities.DependencyInjection": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/HotChocolate.AspNetCore.props": {},
+          "build/HotChocolate.AspNetCore.targets": {}
+        }
+      },
+      "HotChocolate.AspNetCore.Abstractions/10.5.5": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate": "10.5.5",
+          "HotChocolate.Server": "10.5.5",
+          "Microsoft.AspNetCore.Http": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/HotChocolate.AspNetCore.Abstractions.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/HotChocolate.AspNetCore.Abstractions.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HotChocolate.AspNetCore.Voyager/10.5.5": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.AspNetCore.Abstractions": "10.5.5",
+          "Microsoft.AspNetCore.StaticFiles": "2.1.1",
+          "Microsoft.Extensions.FileProviders.Embedded": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/HotChocolate.AspNetCore.Voyager.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/HotChocolate.AspNetCore.Voyager.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HotChocolate.Authorization/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Authorization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Authorization.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.CostAnalysis/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution": "14.2.0",
+          "HotChocolate.Types": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.CostAnalysis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.CostAnalysis.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Execution/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Abstractions": "14.2.0",
+          "HotChocolate.Execution.Abstractions": "14.2.0",
+          "HotChocolate.Fetching": "14.2.0",
+          "HotChocolate.Pagination.Batching": "14.2.0",
+          "HotChocolate.Types": "14.2.0",
+          "HotChocolate.Utilities.DependencyInjection": "14.2.0",
+          "HotChocolate.Validation": "14.2.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "System.IO.Pipelines": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Execution.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Execution.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Execution.Abstractions/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Abstractions": "14.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Execution.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Execution.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Features/14.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/HotChocolate.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Fetching/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "GreenDonut": "14.2.0",
+          "HotChocolate.Types": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Fetching.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Fetching.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Language/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Language.SyntaxTree": "14.2.0",
+          "HotChocolate.Language.Utf8": "14.2.0",
+          "HotChocolate.Language.Visitors": "14.2.0",
+          "HotChocolate.Language.Web": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Language.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Language.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Language.SyntaxTree/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.ObjectPool": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Language.SyntaxTree.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Language.SyntaxTree.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Language.Utf8/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Language.SyntaxTree": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Language.Utf8.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Language.Utf8.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Language.Visitors/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Language.SyntaxTree": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Language.Visitors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Language.Visitors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Language.Web/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Language.Utf8": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Language.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Language.Web.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Pagination.Batching/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "GreenDonut": "14.2.0",
+          "HotChocolate.Pagination.Primitives": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Pagination.Batching.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Pagination.Batching.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Pagination.Core/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Pagination.Primitives": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Pagination.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Pagination.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Pagination.Mappings/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution.Abstractions": "14.2.0",
+          "HotChocolate.Pagination.Core": "14.2.0",
+          "HotChocolate.Pagination.Primitives": "14.2.0",
+          "HotChocolate.Types": "14.2.0",
+          "HotChocolate.Types.CursorPagination": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Pagination.Mappings.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Pagination.Mappings.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Pagination.Primitives/14.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/HotChocolate.Pagination.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Pagination.Primitives.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Primitives/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Language": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Primitives.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Server/10.5.5": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Abstractions": "10.5.5",
+          "HotChocolate.Utilities": "10.5.5",
+          "System.IO.Pipelines": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/HotChocolate.Server.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/HotChocolate.Server.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HotChocolate.Subscriptions/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Abstractions": "14.2.0",
+          "HotChocolate.Execution.Abstractions": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Subscriptions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Subscriptions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Subscriptions.InMemory/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution.Abstractions": "14.2.0",
+          "HotChocolate.Subscriptions": "14.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Subscriptions.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Subscriptions.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Transport.Sockets/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Transport.Sockets.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Transport.Sockets.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Types/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "GreenDonut": "14.2.0",
+          "HotChocolate.Abstractions": "14.2.0",
+          "HotChocolate.Features": "14.2.0",
+          "HotChocolate.Types.Shared": "14.2.0",
+          "HotChocolate.Utilities": "14.2.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.ObjectPool": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Types.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Types.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Types.CursorPagination/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution.Abstractions": "14.2.0",
+          "HotChocolate.Types": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Types.CursorPagination.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Types.CursorPagination.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Types.Errors/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Types.Errors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Types.Errors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Types.Mutations/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution": "14.2.0",
+          "HotChocolate.Types.Errors": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Types.Mutations.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Types.Mutations.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Types.OffsetPagination/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution": "14.2.0",
+          "HotChocolate.Types": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Types.OffsetPagination.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Types.OffsetPagination.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Types.Queries/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution": "14.2.0",
+          "HotChocolate.Types.Errors": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Types.Queries.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Types.Queries.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Types.Scalars.Upload/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Types": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Types.Scalars.Upload.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Types.Scalars.Upload.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Types.Shared/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Language.SyntaxTree": "14.2.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Types.Shared.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Types.Shared.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Utilities/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Utilities.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Utilities.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Utilities.DependencyInjection/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Utilities.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Utilities.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HotChocolate.Validation/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Types": "14.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/HotChocolate.Validation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/HotChocolate.Validation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Hosting.Abstractions/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Server.Abstractions": "2.1.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.1.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
+          "Microsoft.AspNetCore.WebUtilities": "2.1.1",
+          "Microsoft.Extensions.ObjectPool": "2.1.1",
+          "Microsoft.Extensions.Options": "2.1.1",
+          "Microsoft.Net.Http.Headers": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.1.1",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Extensions/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.1.1",
+          "Microsoft.Net.Http.Headers": "2.1.1",
+          "System.Buffers": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.OpenApi/8.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.4.3"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Microsoft.AspNetCore.StaticFiles/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
+          "Microsoft.AspNetCore.Http.Extensions": "2.1.1",
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
+          "Microsoft.Extensions.WebEncoders": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.StaticFiles.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.StaticFiles.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.WebUtilities/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Net.Http.Headers": "2.1.1",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "9.0.0",
+          "Microsoft.EntityFrameworkCore.Analyzers": "9.0.0",
+          "Microsoft.Extensions.Caching.Memory": "9.0.0",
+          "Microsoft.Extensions.Logging": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Abstractions/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Analyzers/9.0.0": {
+        "type": "package"
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.0",
+          "Microsoft.Extensions.Caching.Memory": "9.0.0",
+          "Microsoft.Extensions.Logging": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Extensions.ApiDescription.Server.props": {},
+          "build/Microsoft.Extensions.ApiDescription.Server.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props": {},
+          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Options": "9.0.0",
+          "Microsoft.Extensions.Primitives": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Caching.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Caching.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Embedded/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/netstandard2.0/_._": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Hosting.Abstractions/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "9.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Options": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
+          "System.Diagnostics.DiagnosticSource": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.ObjectPool/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.ObjectPool.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.ObjectPool.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Primitives": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/Microsoft.Extensions.Options.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.WebEncoders/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Options": "2.1.1",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.WebEncoders.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.WebEncoders.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Net.Http.Headers/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.1.1",
+          "System.Buffers": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.OpenApi/1.6.14": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore/6.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
+          "Swashbuckle.AspNetCore.Swagger": "6.6.2",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.6.2",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.6.2"
+        },
+        "build": {
+          "build/Swashbuckle.AspNetCore.props": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/6.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.14"
+        },
+        "compile": {
+          "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/6.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "6.6.2"
+        },
+        "compile": {
+          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/6.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "System.Buffers/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Diagnostics.DiagnosticSource.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Diagnostics.DiagnosticSource.dll": {
+            "related": ".xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.IO.Hashing/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.IO.Pipelines/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/4.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Yarp.ReverseProxy/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Hashing": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Yarp.ReverseProxy.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Yarp.ReverseProxy.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "ChilliCream.Nitro.App/20.0.2": {
+      "sha512": "lGGJr3KQzctFTyK+kr0DanKL2IFxFcGeR3lxwyxo4wxzmDpTYOe84HR2c/bD2rEJDdawke/NLWW+QC43TsM2EQ==",
+      "type": "package",
+      "path": "chillicream.nitro.app/20.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "chillicream.nitro.app.20.0.2.nupkg.sha512",
+        "chillicream.nitro.app.nuspec",
+        "lib/net6.0/ChilliCream.Nitro.App.dll",
+        "lib/net7.0/ChilliCream.Nitro.App.dll",
+        "lib/net8.0/ChilliCream.Nitro.App.dll"
+      ]
+    },
+    "GreenDonut/14.2.0": {
+      "sha512": "hxd/9Ey361GAc2Y5ErpTmYk1bU+rg3iOoVN9dAG5yNTwvtvek2R82ruuQoBSkOiVAkjNLzhB8XIISiQHhDbPfQ==",
+      "type": "package",
+      "path": "greendonut/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "greendonut.14.2.0.nupkg.sha512",
+        "greendonut.nuspec",
+        "hotchocolate-signet.png",
+        "lib/net6.0/GreenDonut.dll",
+        "lib/net6.0/GreenDonut.xml",
+        "lib/net7.0/GreenDonut.dll",
+        "lib/net7.0/GreenDonut.xml",
+        "lib/net8.0/GreenDonut.dll",
+        "lib/net8.0/GreenDonut.xml",
+        "lib/net9.0/GreenDonut.dll",
+        "lib/net9.0/GreenDonut.xml",
+        "lib/netstandard2.0/GreenDonut.dll",
+        "lib/netstandard2.0/GreenDonut.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate/14.2.0": {
+      "sha512": "JUDz7nhSsCYhKujrCtDw9QqONdWMl0xB9UrC4FQ3KW5795uQETrAfEy2dQFeKPphmd/QeQV7DW+j65tOFeCMhA==",
+      "type": "package",
+      "path": "hotchocolate/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.14.2.0.nupkg.sha512",
+        "hotchocolate.nuspec",
+        "lib/net6.0/HotChocolate.dll",
+        "lib/net6.0/HotChocolate.xml",
+        "lib/net7.0/HotChocolate.dll",
+        "lib/net7.0/HotChocolate.xml",
+        "lib/net8.0/HotChocolate.dll",
+        "lib/net8.0/HotChocolate.xml",
+        "lib/net9.0/HotChocolate.dll",
+        "lib/net9.0/HotChocolate.xml",
+        "lib/netstandard2.0/HotChocolate.dll",
+        "lib/netstandard2.0/HotChocolate.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Abstractions/14.2.0": {
+      "sha512": "NyOHlQmyd5+oX2Gv11rfV1l5ett0TPSj65vSgvJ49cJ1NalruEBCqCM5c8TO7HszgkjHNA+lJKk5q1A/6H9mjA==",
+      "type": "package",
+      "path": "hotchocolate.abstractions/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.abstractions.14.2.0.nupkg.sha512",
+        "hotchocolate.abstractions.nuspec",
+        "lib/net6.0/HotChocolate.Abstractions.dll",
+        "lib/net6.0/HotChocolate.Abstractions.xml",
+        "lib/net7.0/HotChocolate.Abstractions.dll",
+        "lib/net7.0/HotChocolate.Abstractions.xml",
+        "lib/net8.0/HotChocolate.Abstractions.dll",
+        "lib/net8.0/HotChocolate.Abstractions.xml",
+        "lib/net9.0/HotChocolate.Abstractions.dll",
+        "lib/net9.0/HotChocolate.Abstractions.xml",
+        "lib/netstandard2.0/HotChocolate.Abstractions.dll",
+        "lib/netstandard2.0/HotChocolate.Abstractions.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.AspNetCore/14.2.0": {
+      "sha512": "oUQYYVwOorEPyenOeq5jNznF6xeV/iGVPdrd7pbtLG2Kt3NEpuHex4HrgQGycs5OjpWIgPNH4TXURjibRDaDUw==",
+      "type": "package",
+      "path": "hotchocolate.aspnetcore/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/HotChocolate.AspNetCore.props",
+        "build/HotChocolate.AspNetCore.targets",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.aspnetcore.14.2.0.nupkg.sha512",
+        "hotchocolate.aspnetcore.nuspec",
+        "lib/net6.0/HotChocolate.AspNetCore.dll",
+        "lib/net6.0/HotChocolate.AspNetCore.xml",
+        "lib/net7.0/HotChocolate.AspNetCore.dll",
+        "lib/net7.0/HotChocolate.AspNetCore.xml",
+        "lib/net8.0/HotChocolate.AspNetCore.dll",
+        "lib/net8.0/HotChocolate.AspNetCore.xml",
+        "lib/net9.0/HotChocolate.AspNetCore.dll",
+        "lib/net9.0/HotChocolate.AspNetCore.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.AspNetCore.Abstractions/10.5.5": {
+      "sha512": "Meu+p2PvDjvPci16qPH947RjsC3Xbi0a1OP2UyxQXXMIlPUJzdKtlad3R3EK6d419PV/JrynIMjHJYS516TcRg==",
+      "type": "package",
+      "path": "hotchocolate.aspnetcore.abstractions/10.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "hotchocolate.aspnetcore.abstractions.10.5.5.nupkg.sha512",
+        "hotchocolate.aspnetcore.abstractions.nuspec",
+        "lib/netstandard2.0/AspNetCore.Abstractions.xml",
+        "lib/netstandard2.0/HotChocolate.AspNetCore.Abstractions.dll",
+        "lib/netstandard2.0/HotChocolate.AspNetCore.Abstractions.pdb"
+      ]
+    },
+    "HotChocolate.AspNetCore.Voyager/10.5.5": {
+      "sha512": "kMkkIO40zy88xypiklN7Tkozpuk5h7CdorD7PqmkXxFwEqfDj3HV1nCXqykkLyqlJttOHrapZRu5Vn8h9G+81Q==",
+      "type": "package",
+      "path": "hotchocolate.aspnetcore.voyager/10.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "hotchocolate.aspnetcore.voyager.10.5.5.nupkg.sha512",
+        "hotchocolate.aspnetcore.voyager.nuspec",
+        "lib/netstandard2.0/AspNetCore.Voyager.xml",
+        "lib/netstandard2.0/HotChocolate.AspNetCore.Voyager.dll",
+        "lib/netstandard2.0/HotChocolate.AspNetCore.Voyager.pdb"
+      ]
+    },
+    "HotChocolate.Authorization/14.2.0": {
+      "sha512": "jOQfDYbhYkJpjLFvfFx60Fi9uYFnI1PSl6TBJcfYzl14iS8wz0Ext1euxG4kixHhXbVCsKC8zlaR50Q+cPS1Ow==",
+      "type": "package",
+      "path": "hotchocolate.authorization/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.authorization.14.2.0.nupkg.sha512",
+        "hotchocolate.authorization.nuspec",
+        "lib/net6.0/HotChocolate.Authorization.dll",
+        "lib/net6.0/HotChocolate.Authorization.xml",
+        "lib/net7.0/HotChocolate.Authorization.dll",
+        "lib/net7.0/HotChocolate.Authorization.xml",
+        "lib/net8.0/HotChocolate.Authorization.dll",
+        "lib/net8.0/HotChocolate.Authorization.xml",
+        "lib/net9.0/HotChocolate.Authorization.dll",
+        "lib/net9.0/HotChocolate.Authorization.xml",
+        "lib/netstandard2.0/HotChocolate.Authorization.dll",
+        "lib/netstandard2.0/HotChocolate.Authorization.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.CostAnalysis/14.2.0": {
+      "sha512": "QTb4D1wERc5JQCveDa+QgBEa79Ebw3D5BQYuefDdU3Gl3TKeu3gAGABpTPxFCaNx0p5YLEufVK6unrgutu5V1Q==",
+      "type": "package",
+      "path": "hotchocolate.costanalysis/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.costanalysis.14.2.0.nupkg.sha512",
+        "hotchocolate.costanalysis.nuspec",
+        "lib/net7.0/HotChocolate.CostAnalysis.dll",
+        "lib/net7.0/HotChocolate.CostAnalysis.xml",
+        "lib/net8.0/HotChocolate.CostAnalysis.dll",
+        "lib/net8.0/HotChocolate.CostAnalysis.xml",
+        "lib/net9.0/HotChocolate.CostAnalysis.dll",
+        "lib/net9.0/HotChocolate.CostAnalysis.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Execution/14.2.0": {
+      "sha512": "wSOu6lL1ApzasBc0Re3YVNH/otpcQmXDk7uwKXueNBHUy5u2jPKSe4sJuVNIO1njvnHttFBV0efuicR7xnO8Vw==",
+      "type": "package",
+      "path": "hotchocolate.execution/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.execution.14.2.0.nupkg.sha512",
+        "hotchocolate.execution.nuspec",
+        "lib/net6.0/HotChocolate.Execution.dll",
+        "lib/net6.0/HotChocolate.Execution.xml",
+        "lib/net7.0/HotChocolate.Execution.dll",
+        "lib/net7.0/HotChocolate.Execution.xml",
+        "lib/net8.0/HotChocolate.Execution.dll",
+        "lib/net8.0/HotChocolate.Execution.xml",
+        "lib/net9.0/HotChocolate.Execution.dll",
+        "lib/net9.0/HotChocolate.Execution.xml",
+        "lib/netstandard2.0/HotChocolate.Execution.dll",
+        "lib/netstandard2.0/HotChocolate.Execution.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Execution.Abstractions/14.2.0": {
+      "sha512": "pKEVOVfMmU5Zbio+pjTHwArn41kMhdcLRm1bORwjlzq/sEkPPrBYF0VO3oJK494DbY2dBRBzUOvrlalVZPsVzg==",
+      "type": "package",
+      "path": "hotchocolate.execution.abstractions/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.execution.abstractions.14.2.0.nupkg.sha512",
+        "hotchocolate.execution.abstractions.nuspec",
+        "lib/net6.0/HotChocolate.Execution.Abstractions.dll",
+        "lib/net6.0/HotChocolate.Execution.Abstractions.xml",
+        "lib/net7.0/HotChocolate.Execution.Abstractions.dll",
+        "lib/net7.0/HotChocolate.Execution.Abstractions.xml",
+        "lib/net8.0/HotChocolate.Execution.Abstractions.dll",
+        "lib/net8.0/HotChocolate.Execution.Abstractions.xml",
+        "lib/net9.0/HotChocolate.Execution.Abstractions.dll",
+        "lib/net9.0/HotChocolate.Execution.Abstractions.xml",
+        "lib/netstandard2.0/HotChocolate.Execution.Abstractions.dll",
+        "lib/netstandard2.0/HotChocolate.Execution.Abstractions.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Features/14.2.0": {
+      "sha512": "qlo8dwDoQwjJAyiks+xv3g46jt+4kofKfYfUrqR1WcYZ0jdtNrY+LXvoC6wmy+ifuN/mUZLDgxQpdLwWSX8E2A==",
+      "type": "package",
+      "path": "hotchocolate.features/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.features.14.2.0.nupkg.sha512",
+        "hotchocolate.features.nuspec",
+        "lib/net6.0/HotChocolate.Features.dll",
+        "lib/net6.0/HotChocolate.Features.xml",
+        "lib/net7.0/HotChocolate.Features.dll",
+        "lib/net7.0/HotChocolate.Features.xml",
+        "lib/net8.0/HotChocolate.Features.dll",
+        "lib/net8.0/HotChocolate.Features.xml",
+        "lib/net9.0/HotChocolate.Features.dll",
+        "lib/net9.0/HotChocolate.Features.xml",
+        "lib/netstandard2.0/HotChocolate.Features.dll",
+        "lib/netstandard2.0/HotChocolate.Features.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Fetching/14.2.0": {
+      "sha512": "XcVBhckXB+u8px/OoTJN+0q/kJcnChn4ZPUaAy+3o2ImnAXljo1Cnhi/P7d/iEL5JSEWCVR6rOv5R0itkN0RNg==",
+      "type": "package",
+      "path": "hotchocolate.fetching/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.fetching.14.2.0.nupkg.sha512",
+        "hotchocolate.fetching.nuspec",
+        "lib/net6.0/HotChocolate.Fetching.dll",
+        "lib/net6.0/HotChocolate.Fetching.xml",
+        "lib/net7.0/HotChocolate.Fetching.dll",
+        "lib/net7.0/HotChocolate.Fetching.xml",
+        "lib/net8.0/HotChocolate.Fetching.dll",
+        "lib/net8.0/HotChocolate.Fetching.xml",
+        "lib/net9.0/HotChocolate.Fetching.dll",
+        "lib/net9.0/HotChocolate.Fetching.xml",
+        "lib/netstandard2.0/HotChocolate.Fetching.dll",
+        "lib/netstandard2.0/HotChocolate.Fetching.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Language/14.2.0": {
+      "sha512": "onm/X8PQAmxDUXea2CFQQf5VAC9W+tLKqXQcRY8nkub9N1wKJM4OE5wwdMUFon375tqTATJyTFJAiqmF14lOkg==",
+      "type": "package",
+      "path": "hotchocolate.language/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.language.14.2.0.nupkg.sha512",
+        "hotchocolate.language.nuspec",
+        "lib/net6.0/HotChocolate.Language.dll",
+        "lib/net6.0/HotChocolate.Language.xml",
+        "lib/net7.0/HotChocolate.Language.dll",
+        "lib/net7.0/HotChocolate.Language.xml",
+        "lib/net8.0/HotChocolate.Language.dll",
+        "lib/net8.0/HotChocolate.Language.xml",
+        "lib/net9.0/HotChocolate.Language.dll",
+        "lib/net9.0/HotChocolate.Language.xml",
+        "lib/netstandard2.0/HotChocolate.Language.dll",
+        "lib/netstandard2.0/HotChocolate.Language.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Language.SyntaxTree/14.2.0": {
+      "sha512": "JhJiF6AlXLhcqGu71v0Vz3fz5vxmvroHgO4FLvwAuk/Ag5KgMGvIgnsLCPH3uzMySlltjO2H5S8Xnk2dGpLHig==",
+      "type": "package",
+      "path": "hotchocolate.language.syntaxtree/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.language.syntaxtree.14.2.0.nupkg.sha512",
+        "hotchocolate.language.syntaxtree.nuspec",
+        "lib/net6.0/HotChocolate.Language.SyntaxTree.dll",
+        "lib/net6.0/HotChocolate.Language.SyntaxTree.xml",
+        "lib/net7.0/HotChocolate.Language.SyntaxTree.dll",
+        "lib/net7.0/HotChocolate.Language.SyntaxTree.xml",
+        "lib/net8.0/HotChocolate.Language.SyntaxTree.dll",
+        "lib/net8.0/HotChocolate.Language.SyntaxTree.xml",
+        "lib/net9.0/HotChocolate.Language.SyntaxTree.dll",
+        "lib/net9.0/HotChocolate.Language.SyntaxTree.xml",
+        "lib/netstandard2.0/HotChocolate.Language.SyntaxTree.dll",
+        "lib/netstandard2.0/HotChocolate.Language.SyntaxTree.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Language.Utf8/14.2.0": {
+      "sha512": "h2Hi6g8quLwtR6Uz9aTLjadcUpxlFP/V+KbHImuhHD40AABcmNK82/71P/WaAQfQm1yg+beZhq9IENH76RvBiw==",
+      "type": "package",
+      "path": "hotchocolate.language.utf8/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.language.utf8.14.2.0.nupkg.sha512",
+        "hotchocolate.language.utf8.nuspec",
+        "lib/net6.0/HotChocolate.Language.Utf8.dll",
+        "lib/net6.0/HotChocolate.Language.Utf8.xml",
+        "lib/net7.0/HotChocolate.Language.Utf8.dll",
+        "lib/net7.0/HotChocolate.Language.Utf8.xml",
+        "lib/net8.0/HotChocolate.Language.Utf8.dll",
+        "lib/net8.0/HotChocolate.Language.Utf8.xml",
+        "lib/net9.0/HotChocolate.Language.Utf8.dll",
+        "lib/net9.0/HotChocolate.Language.Utf8.xml",
+        "lib/netstandard2.0/HotChocolate.Language.Utf8.dll",
+        "lib/netstandard2.0/HotChocolate.Language.Utf8.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Language.Visitors/14.2.0": {
+      "sha512": "ZDYgJYA54k/Tgo3w1VXeu6zX++swscW2mrkKNOncuAl3lj7H7IPx0GbdGfTgAz58QlXfirDNoEKJESxnPYhNlg==",
+      "type": "package",
+      "path": "hotchocolate.language.visitors/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.language.visitors.14.2.0.nupkg.sha512",
+        "hotchocolate.language.visitors.nuspec",
+        "lib/net6.0/HotChocolate.Language.Visitors.dll",
+        "lib/net6.0/HotChocolate.Language.Visitors.xml",
+        "lib/net7.0/HotChocolate.Language.Visitors.dll",
+        "lib/net7.0/HotChocolate.Language.Visitors.xml",
+        "lib/net8.0/HotChocolate.Language.Visitors.dll",
+        "lib/net8.0/HotChocolate.Language.Visitors.xml",
+        "lib/net9.0/HotChocolate.Language.Visitors.dll",
+        "lib/net9.0/HotChocolate.Language.Visitors.xml",
+        "lib/netstandard2.0/HotChocolate.Language.Visitors.dll",
+        "lib/netstandard2.0/HotChocolate.Language.Visitors.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Language.Web/14.2.0": {
+      "sha512": "L3IZZ+o9JicrKAApnX0HijiAb0mEhD0ekiRQjOhlLJwN4BAPv77XjJ3WNOlczqiNka9993sP5TTEDPoY2WSKeA==",
+      "type": "package",
+      "path": "hotchocolate.language.web/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.language.web.14.2.0.nupkg.sha512",
+        "hotchocolate.language.web.nuspec",
+        "lib/net6.0/HotChocolate.Language.Web.dll",
+        "lib/net6.0/HotChocolate.Language.Web.xml",
+        "lib/net7.0/HotChocolate.Language.Web.dll",
+        "lib/net7.0/HotChocolate.Language.Web.xml",
+        "lib/net8.0/HotChocolate.Language.Web.dll",
+        "lib/net8.0/HotChocolate.Language.Web.xml",
+        "lib/net9.0/HotChocolate.Language.Web.dll",
+        "lib/net9.0/HotChocolate.Language.Web.xml",
+        "lib/netstandard2.0/HotChocolate.Language.Web.dll",
+        "lib/netstandard2.0/HotChocolate.Language.Web.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Pagination.Batching/14.2.0": {
+      "sha512": "V8EPUFkIdIB2ILj3j7Ea3iOaXSosPJ53pY6M/veczgIq+fgaAS09MPFkXbtE7QoQtYVp09U0xKWcmdn5A2hrEg==",
+      "type": "package",
+      "path": "hotchocolate.pagination.batching/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.pagination.batching.14.2.0.nupkg.sha512",
+        "hotchocolate.pagination.batching.nuspec",
+        "lib/net6.0/HotChocolate.Pagination.Batching.dll",
+        "lib/net6.0/HotChocolate.Pagination.Batching.xml",
+        "lib/net7.0/HotChocolate.Pagination.Batching.dll",
+        "lib/net7.0/HotChocolate.Pagination.Batching.xml",
+        "lib/net8.0/HotChocolate.Pagination.Batching.dll",
+        "lib/net8.0/HotChocolate.Pagination.Batching.xml",
+        "lib/net9.0/HotChocolate.Pagination.Batching.dll",
+        "lib/net9.0/HotChocolate.Pagination.Batching.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Pagination.Core/14.2.0": {
+      "sha512": "BL++hs/zDWCIXIGIFrpRz1ZTA4Z+87byeGoRH4HbkhRH8R4GzcqUBtsw+2HtTMoNHKeN0OhjRqpLEKNr56Pf9Q==",
+      "type": "package",
+      "path": "hotchocolate.pagination.core/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.pagination.core.14.2.0.nupkg.sha512",
+        "hotchocolate.pagination.core.nuspec",
+        "lib/net6.0/HotChocolate.Pagination.Core.dll",
+        "lib/net6.0/HotChocolate.Pagination.Core.xml",
+        "lib/net7.0/HotChocolate.Pagination.Core.dll",
+        "lib/net7.0/HotChocolate.Pagination.Core.xml",
+        "lib/net8.0/HotChocolate.Pagination.Core.dll",
+        "lib/net8.0/HotChocolate.Pagination.Core.xml",
+        "lib/net9.0/HotChocolate.Pagination.Core.dll",
+        "lib/net9.0/HotChocolate.Pagination.Core.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Pagination.Mappings/14.2.0": {
+      "sha512": "eD4bMNFoZP5hVmtISElf+2Vh7Xj/880nMz7T++qqGDHerwlFCETJFBrMz2bD9uSiz7+0BFtkiB95zRfPeE99Pg==",
+      "type": "package",
+      "path": "hotchocolate.pagination.mappings/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.pagination.mappings.14.2.0.nupkg.sha512",
+        "hotchocolate.pagination.mappings.nuspec",
+        "lib/net6.0/HotChocolate.Pagination.Mappings.dll",
+        "lib/net6.0/HotChocolate.Pagination.Mappings.xml",
+        "lib/net7.0/HotChocolate.Pagination.Mappings.dll",
+        "lib/net7.0/HotChocolate.Pagination.Mappings.xml",
+        "lib/net8.0/HotChocolate.Pagination.Mappings.dll",
+        "lib/net8.0/HotChocolate.Pagination.Mappings.xml",
+        "lib/net9.0/HotChocolate.Pagination.Mappings.dll",
+        "lib/net9.0/HotChocolate.Pagination.Mappings.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Pagination.Primitives/14.2.0": {
+      "sha512": "HpKQ8LtRhg3ZhX31YArD7BKh8I1JUYjrB+thZWZKCGsmz+xiTs+7/gG0b5fchfrltYKIn2DLOTE06bd69hkM2A==",
+      "type": "package",
+      "path": "hotchocolate.pagination.primitives/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.pagination.primitives.14.2.0.nupkg.sha512",
+        "hotchocolate.pagination.primitives.nuspec",
+        "lib/net6.0/HotChocolate.Pagination.Primitives.dll",
+        "lib/net6.0/HotChocolate.Pagination.Primitives.xml",
+        "lib/net7.0/HotChocolate.Pagination.Primitives.dll",
+        "lib/net7.0/HotChocolate.Pagination.Primitives.xml",
+        "lib/net8.0/HotChocolate.Pagination.Primitives.dll",
+        "lib/net8.0/HotChocolate.Pagination.Primitives.xml",
+        "lib/net9.0/HotChocolate.Pagination.Primitives.dll",
+        "lib/net9.0/HotChocolate.Pagination.Primitives.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Primitives/14.2.0": {
+      "sha512": "V+g6rhheKkHIEL7kH7YN5v5i+1z2W/YX54Y8bG/9vovCRXvSE9qRIAAUtHRJz9IQfTiMw380xUIBZVeV3UehvQ==",
+      "type": "package",
+      "path": "hotchocolate.primitives/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.primitives.14.2.0.nupkg.sha512",
+        "hotchocolate.primitives.nuspec",
+        "lib/net6.0/HotChocolate.Primitives.dll",
+        "lib/net6.0/HotChocolate.Primitives.xml",
+        "lib/net7.0/HotChocolate.Primitives.dll",
+        "lib/net7.0/HotChocolate.Primitives.xml",
+        "lib/net8.0/HotChocolate.Primitives.dll",
+        "lib/net8.0/HotChocolate.Primitives.xml",
+        "lib/net9.0/HotChocolate.Primitives.dll",
+        "lib/net9.0/HotChocolate.Primitives.xml",
+        "lib/netstandard2.0/HotChocolate.Primitives.dll",
+        "lib/netstandard2.0/HotChocolate.Primitives.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Server/10.5.5": {
+      "sha512": "oGEUTJq/2axD74+HCDwN4FxMWCbYFgjknMFZbOrPNuL2Wy9C0x0nWEeWpxLHRKUvfRn5L7bUZ2av9BgjvxOg2g==",
+      "type": "package",
+      "path": "hotchocolate.server/10.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "hotchocolate.server.10.5.5.nupkg.sha512",
+        "hotchocolate.server.nuspec",
+        "lib/net461/HotChocolate.Server.dll",
+        "lib/net461/HotChocolate.Server.pdb",
+        "lib/net461/Server.xml",
+        "lib/netstandard2.0/HotChocolate.Server.dll",
+        "lib/netstandard2.0/HotChocolate.Server.pdb",
+        "lib/netstandard2.0/Server.xml"
+      ]
+    },
+    "HotChocolate.Subscriptions/14.2.0": {
+      "sha512": "LaYVRyPcZVPu1RNFPjxPHZ+xHTDTKaPs7zRUQDI6dJT286GfMEAv9Y20+QcfVygimtS3cJ7AYeemrglSknFGLg==",
+      "type": "package",
+      "path": "hotchocolate.subscriptions/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.subscriptions.14.2.0.nupkg.sha512",
+        "hotchocolate.subscriptions.nuspec",
+        "lib/net6.0/HotChocolate.Subscriptions.dll",
+        "lib/net6.0/HotChocolate.Subscriptions.xml",
+        "lib/net7.0/HotChocolate.Subscriptions.dll",
+        "lib/net7.0/HotChocolate.Subscriptions.xml",
+        "lib/net8.0/HotChocolate.Subscriptions.dll",
+        "lib/net8.0/HotChocolate.Subscriptions.xml",
+        "lib/net9.0/HotChocolate.Subscriptions.dll",
+        "lib/net9.0/HotChocolate.Subscriptions.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Subscriptions.InMemory/14.2.0": {
+      "sha512": "PFyd/Zkbl7fGRM8d2LjrpbBht6RiKWk+ypd0o8Qbkr19zfw1ovNyMRU4fuS07bytTFQyNPP65fdlbT5WSpG6sA==",
+      "type": "package",
+      "path": "hotchocolate.subscriptions.inmemory/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.subscriptions.inmemory.14.2.0.nupkg.sha512",
+        "hotchocolate.subscriptions.inmemory.nuspec",
+        "lib/net6.0/HotChocolate.Subscriptions.InMemory.dll",
+        "lib/net6.0/HotChocolate.Subscriptions.InMemory.xml",
+        "lib/net7.0/HotChocolate.Subscriptions.InMemory.dll",
+        "lib/net7.0/HotChocolate.Subscriptions.InMemory.xml",
+        "lib/net8.0/HotChocolate.Subscriptions.InMemory.dll",
+        "lib/net8.0/HotChocolate.Subscriptions.InMemory.xml",
+        "lib/net9.0/HotChocolate.Subscriptions.InMemory.dll",
+        "lib/net9.0/HotChocolate.Subscriptions.InMemory.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Transport.Sockets/14.2.0": {
+      "sha512": "E6rUsayRNNFCXVQZEpdgKA2XPynyb74ZpTZK+uc+6CUKeNrGeI+6qsQyKOTDfFe09NGFIiF560H7Z6zeVqBt8w==",
+      "type": "package",
+      "path": "hotchocolate.transport.sockets/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.transport.sockets.14.2.0.nupkg.sha512",
+        "hotchocolate.transport.sockets.nuspec",
+        "lib/net6.0/HotChocolate.Transport.Sockets.dll",
+        "lib/net6.0/HotChocolate.Transport.Sockets.xml",
+        "lib/net7.0/HotChocolate.Transport.Sockets.dll",
+        "lib/net7.0/HotChocolate.Transport.Sockets.xml",
+        "lib/net8.0/HotChocolate.Transport.Sockets.dll",
+        "lib/net8.0/HotChocolate.Transport.Sockets.xml",
+        "lib/net9.0/HotChocolate.Transport.Sockets.dll",
+        "lib/net9.0/HotChocolate.Transport.Sockets.xml",
+        "lib/netstandard2.0/HotChocolate.Transport.Sockets.dll",
+        "lib/netstandard2.0/HotChocolate.Transport.Sockets.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Types/14.2.0": {
+      "sha512": "Fu53dm5tJs///eFvAgvx/N65pCZsUOi31p1ac9ShPKXAxf45YR+q6fF5N8Z6HVHxmdwSlVsvEi1LusDpffzJYw==",
+      "type": "package",
+      "path": "hotchocolate.types/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.types.14.2.0.nupkg.sha512",
+        "hotchocolate.types.nuspec",
+        "lib/net6.0/HotChocolate.Types.dll",
+        "lib/net6.0/HotChocolate.Types.xml",
+        "lib/net7.0/HotChocolate.Types.dll",
+        "lib/net7.0/HotChocolate.Types.xml",
+        "lib/net8.0/HotChocolate.Types.dll",
+        "lib/net8.0/HotChocolate.Types.xml",
+        "lib/net9.0/HotChocolate.Types.dll",
+        "lib/net9.0/HotChocolate.Types.xml",
+        "lib/netstandard2.0/HotChocolate.Types.dll",
+        "lib/netstandard2.0/HotChocolate.Types.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Types.CursorPagination/14.2.0": {
+      "sha512": "i/Mn5Vqy3vIfoQ1ENxkaFPD8KJToaDrOpzyrS6MBcOsHWaViUH2gfx2K14aDOHOezhI37GpgqBsTzvDy1/QggQ==",
+      "type": "package",
+      "path": "hotchocolate.types.cursorpagination/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.types.cursorpagination.14.2.0.nupkg.sha512",
+        "hotchocolate.types.cursorpagination.nuspec",
+        "lib/net6.0/HotChocolate.Types.CursorPagination.dll",
+        "lib/net6.0/HotChocolate.Types.CursorPagination.xml",
+        "lib/net7.0/HotChocolate.Types.CursorPagination.dll",
+        "lib/net7.0/HotChocolate.Types.CursorPagination.xml",
+        "lib/net8.0/HotChocolate.Types.CursorPagination.dll",
+        "lib/net8.0/HotChocolate.Types.CursorPagination.xml",
+        "lib/net9.0/HotChocolate.Types.CursorPagination.dll",
+        "lib/net9.0/HotChocolate.Types.CursorPagination.xml",
+        "lib/netstandard2.0/HotChocolate.Types.CursorPagination.dll",
+        "lib/netstandard2.0/HotChocolate.Types.CursorPagination.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Types.Errors/14.2.0": {
+      "sha512": "WgKQnj3K5NvZO1onZN5/B3Y7f3/HTYeaimv31BW5F4kUrEQCTSjWNUcNrpd/R/gEG/RenbcVIbBbYy/1I6QFPw==",
+      "type": "package",
+      "path": "hotchocolate.types.errors/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.types.errors.14.2.0.nupkg.sha512",
+        "hotchocolate.types.errors.nuspec",
+        "lib/net6.0/HotChocolate.Types.Errors.dll",
+        "lib/net6.0/HotChocolate.Types.Errors.xml",
+        "lib/net7.0/HotChocolate.Types.Errors.dll",
+        "lib/net7.0/HotChocolate.Types.Errors.xml",
+        "lib/net8.0/HotChocolate.Types.Errors.dll",
+        "lib/net8.0/HotChocolate.Types.Errors.xml",
+        "lib/net9.0/HotChocolate.Types.Errors.dll",
+        "lib/net9.0/HotChocolate.Types.Errors.xml",
+        "lib/netstandard2.0/HotChocolate.Types.Errors.dll",
+        "lib/netstandard2.0/HotChocolate.Types.Errors.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Types.Mutations/14.2.0": {
+      "sha512": "4+A3JuZIcdF52HnM9vWaFoUp8sfeMWZMG7I9k/WwdWqmQiTzKwSj9l5M+xL+Vn5NfZszYDAwEwvxURCQYdxt4Q==",
+      "type": "package",
+      "path": "hotchocolate.types.mutations/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.types.mutations.14.2.0.nupkg.sha512",
+        "hotchocolate.types.mutations.nuspec",
+        "lib/net6.0/HotChocolate.Types.Mutations.dll",
+        "lib/net6.0/HotChocolate.Types.Mutations.xml",
+        "lib/net7.0/HotChocolate.Types.Mutations.dll",
+        "lib/net7.0/HotChocolate.Types.Mutations.xml",
+        "lib/net8.0/HotChocolate.Types.Mutations.dll",
+        "lib/net8.0/HotChocolate.Types.Mutations.xml",
+        "lib/net9.0/HotChocolate.Types.Mutations.dll",
+        "lib/net9.0/HotChocolate.Types.Mutations.xml",
+        "lib/netstandard2.0/HotChocolate.Types.Mutations.dll",
+        "lib/netstandard2.0/HotChocolate.Types.Mutations.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Types.OffsetPagination/14.2.0": {
+      "sha512": "/Ayp3bmWy00Ip5bEiepD2qwF/mBDa+Vdjrmqa3ubzt1tWeCGRZidSrU0cdjSfskOHJzeQBHG2KGUieIr/UdchA==",
+      "type": "package",
+      "path": "hotchocolate.types.offsetpagination/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.types.offsetpagination.14.2.0.nupkg.sha512",
+        "hotchocolate.types.offsetpagination.nuspec",
+        "lib/net6.0/HotChocolate.Types.OffsetPagination.dll",
+        "lib/net6.0/HotChocolate.Types.OffsetPagination.xml",
+        "lib/net7.0/HotChocolate.Types.OffsetPagination.dll",
+        "lib/net7.0/HotChocolate.Types.OffsetPagination.xml",
+        "lib/net8.0/HotChocolate.Types.OffsetPagination.dll",
+        "lib/net8.0/HotChocolate.Types.OffsetPagination.xml",
+        "lib/net9.0/HotChocolate.Types.OffsetPagination.dll",
+        "lib/net9.0/HotChocolate.Types.OffsetPagination.xml",
+        "lib/netstandard2.0/HotChocolate.Types.OffsetPagination.dll",
+        "lib/netstandard2.0/HotChocolate.Types.OffsetPagination.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Types.Queries/14.2.0": {
+      "sha512": "WklDTXe6BfDikmWDfh50Gq6KgPZaFo85JaDEMlbriIw4mBV4hH0RysNcjEDl6IEMJZ204M9iOZ9BQMo46dHpzA==",
+      "type": "package",
+      "path": "hotchocolate.types.queries/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.types.queries.14.2.0.nupkg.sha512",
+        "hotchocolate.types.queries.nuspec",
+        "lib/net6.0/HotChocolate.Types.Queries.dll",
+        "lib/net6.0/HotChocolate.Types.Queries.xml",
+        "lib/net7.0/HotChocolate.Types.Queries.dll",
+        "lib/net7.0/HotChocolate.Types.Queries.xml",
+        "lib/net8.0/HotChocolate.Types.Queries.dll",
+        "lib/net8.0/HotChocolate.Types.Queries.xml",
+        "lib/net9.0/HotChocolate.Types.Queries.dll",
+        "lib/net9.0/HotChocolate.Types.Queries.xml",
+        "lib/netstandard2.0/HotChocolate.Types.Queries.dll",
+        "lib/netstandard2.0/HotChocolate.Types.Queries.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Types.Scalars.Upload/14.2.0": {
+      "sha512": "1ZPQ2Pf54uXYIvMKsGv9jGsLssFBVvOSThe9yVntgUMVz6Nbx2w8dHBme1rMNHlc+MBXagCVLxS8V5E2FBuIwQ==",
+      "type": "package",
+      "path": "hotchocolate.types.scalars.upload/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.types.scalars.upload.14.2.0.nupkg.sha512",
+        "hotchocolate.types.scalars.upload.nuspec",
+        "lib/net6.0/HotChocolate.Types.Scalars.Upload.dll",
+        "lib/net6.0/HotChocolate.Types.Scalars.Upload.xml",
+        "lib/net7.0/HotChocolate.Types.Scalars.Upload.dll",
+        "lib/net7.0/HotChocolate.Types.Scalars.Upload.xml",
+        "lib/net8.0/HotChocolate.Types.Scalars.Upload.dll",
+        "lib/net8.0/HotChocolate.Types.Scalars.Upload.xml",
+        "lib/net9.0/HotChocolate.Types.Scalars.Upload.dll",
+        "lib/net9.0/HotChocolate.Types.Scalars.Upload.xml",
+        "lib/netstandard2.0/HotChocolate.Types.Scalars.Upload.dll",
+        "lib/netstandard2.0/HotChocolate.Types.Scalars.Upload.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Types.Shared/14.2.0": {
+      "sha512": "wbeeUMAMKu4Ilkb/SPKymZfHdCaubQ2x1zVffkItwQhGWWxHUeKPcqvPa3vJSw2/pFIDYUD92P8fEUNVonFc1g==",
+      "type": "package",
+      "path": "hotchocolate.types.shared/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.types.shared.14.2.0.nupkg.sha512",
+        "hotchocolate.types.shared.nuspec",
+        "lib/net6.0/HotChocolate.Types.Shared.dll",
+        "lib/net6.0/HotChocolate.Types.Shared.xml",
+        "lib/net7.0/HotChocolate.Types.Shared.dll",
+        "lib/net7.0/HotChocolate.Types.Shared.xml",
+        "lib/net8.0/HotChocolate.Types.Shared.dll",
+        "lib/net8.0/HotChocolate.Types.Shared.xml",
+        "lib/net9.0/HotChocolate.Types.Shared.dll",
+        "lib/net9.0/HotChocolate.Types.Shared.xml",
+        "lib/netstandard2.0/HotChocolate.Types.Shared.dll",
+        "lib/netstandard2.0/HotChocolate.Types.Shared.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Utilities/14.2.0": {
+      "sha512": "U/qhHtHI2EO6ZrZ+zp+9FI0Xh6S71E4JoRjEbUWS7hxcOpMjiwFgKimq4UEyS/O68E6EnDhbxdA+Ba3CDh83ew==",
+      "type": "package",
+      "path": "hotchocolate.utilities/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.utilities.14.2.0.nupkg.sha512",
+        "hotchocolate.utilities.nuspec",
+        "lib/net6.0/HotChocolate.Utilities.dll",
+        "lib/net6.0/HotChocolate.Utilities.xml",
+        "lib/net7.0/HotChocolate.Utilities.dll",
+        "lib/net7.0/HotChocolate.Utilities.xml",
+        "lib/net8.0/HotChocolate.Utilities.dll",
+        "lib/net8.0/HotChocolate.Utilities.xml",
+        "lib/net9.0/HotChocolate.Utilities.dll",
+        "lib/net9.0/HotChocolate.Utilities.xml",
+        "lib/netstandard2.0/HotChocolate.Utilities.dll",
+        "lib/netstandard2.0/HotChocolate.Utilities.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Utilities.DependencyInjection/14.2.0": {
+      "sha512": "ix65NtDtNjOx7q6UpTZl+Dm8/HthtCyLKCGTJytk9I/DnZdgK7FtbWeasoD1MjKQnfxE5HV7Yrf8N3gSjaVm1A==",
+      "type": "package",
+      "path": "hotchocolate.utilities.dependencyinjection/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.utilities.dependencyinjection.14.2.0.nupkg.sha512",
+        "hotchocolate.utilities.dependencyinjection.nuspec",
+        "lib/net6.0/HotChocolate.Utilities.DependencyInjection.dll",
+        "lib/net6.0/HotChocolate.Utilities.DependencyInjection.xml",
+        "lib/net7.0/HotChocolate.Utilities.DependencyInjection.dll",
+        "lib/net7.0/HotChocolate.Utilities.DependencyInjection.xml",
+        "lib/net8.0/HotChocolate.Utilities.DependencyInjection.dll",
+        "lib/net8.0/HotChocolate.Utilities.DependencyInjection.xml",
+        "lib/net9.0/HotChocolate.Utilities.DependencyInjection.dll",
+        "lib/net9.0/HotChocolate.Utilities.DependencyInjection.xml",
+        "lib/netstandard2.0/HotChocolate.Utilities.DependencyInjection.dll",
+        "lib/netstandard2.0/HotChocolate.Utilities.DependencyInjection.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Validation/14.2.0": {
+      "sha512": "MCmMD9wdOITgRpM8K3H9LoI5+UcX7u68XYDT+FK5bhlxeCqR5R8LiXJh9NcqD3DwrK7wtn3cBBRpyuU/X97JvQ==",
+      "type": "package",
+      "path": "hotchocolate.validation/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.validation.14.2.0.nupkg.sha512",
+        "hotchocolate.validation.nuspec",
+        "lib/net6.0/HotChocolate.Validation.dll",
+        "lib/net6.0/HotChocolate.Validation.xml",
+        "lib/net7.0/HotChocolate.Validation.dll",
+        "lib/net7.0/HotChocolate.Validation.xml",
+        "lib/net8.0/HotChocolate.Validation.dll",
+        "lib/net8.0/HotChocolate.Validation.xml",
+        "lib/net9.0/HotChocolate.Validation.dll",
+        "lib/net9.0/HotChocolate.Validation.xml",
+        "lib/netstandard2.0/HotChocolate.Validation.dll",
+        "lib/netstandard2.0/HotChocolate.Validation.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Hosting.Abstractions/2.1.1": {
+      "sha512": "76cKcp2pWhvdV2TXTqMg/DyW7N6cDzTEhtL8vVWFShQN+Ylwv3eO/vUQr2BS3Hz4IZHEpL+FOo2T+MtymHDqDQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.hosting.abstractions/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Abstractions.xml",
+        "microsoft.aspnetcore.hosting.abstractions.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.hosting.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.1.1": {
+      "sha512": "+vD7HJYzAXNq17t+NgRkpS38cxuAyOBu8ixruOiA3nWsybozolUdALWiZ5QFtGRzajSLPFA2YsbO3NPcqoUwcw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.hosting.server.abstractions/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.xml",
+        "microsoft.aspnetcore.hosting.server.abstractions.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.hosting.server.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http/2.1.1": {
+      "sha512": "pPDcCW8spnyibK3krpxrOpaFHf5fjV6k1Hsl6gfh77N/8gRYlLU7MOQDUnjpEwdlHmtxwJKQJNxZqVQOmJGRUw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.xml",
+        "microsoft.aspnetcore.http.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.http.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.1.1": {
+      "sha512": "kQUEVOU4loc8CPSb2WoHFTESqwIa8Ik7ysCBfTwzHAd0moWovc9JQLmhDIHlYLjHbyexqZAlkq/FPRUZqokebw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.abstractions/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.xml",
+        "microsoft.aspnetcore.http.abstractions.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.http.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Extensions/2.1.1": {
+      "sha512": "ncAgV+cqsWSqjLXFUTyObGh4Tr7ShYYs3uW8Q/YpRwZn7eLV7dux5Z6GLY+rsdzmIHiia3Q2NWbLULQi7aziHw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.extensions/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.xml",
+        "microsoft.aspnetcore.http.extensions.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.http.extensions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/2.1.1": {
+      "sha512": "VklZ7hWgSvHBcDtwYYkdMdI/adlf7ebxTZ9kdzAhX+gUs5jSHE9mZlTamdgf9miSsxc1QjNazHXTDJdVPZKKTw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.OpenApi/8.0.11": {
+      "sha512": "1WCvCZpqvOAyul6upSJ8Rkb/QHdr4PLrDny26vFexya/nTkG3x2zt8j9qlJ5T3J+/yJD9KwlGKhho9ZDD/YiFA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/8.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net8.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.8.0.11.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.StaticFiles/2.1.1": {
+      "sha512": "THLu6XGauf9kdAI0OyjoqvY/11Ap/Ra/ZNHfWQjrsS4b0AhvzUZgyuq5xYrmdA4+3goRxkqbH2xvrIISGGsukA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.staticfiles/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.StaticFiles.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.StaticFiles.xml",
+        "microsoft.aspnetcore.staticfiles.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.staticfiles.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.WebUtilities/2.1.1": {
+      "sha512": "PGKIZt4+412Z/XPoSjvYu/QIbTxcAQuEFNoA1Pw8a9mgmO0ZhNBmfaNyhgXFf7Rq62kP0tT/2WXpxdcQhkFUPA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.webutilities/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
+        "microsoft.aspnetcore.webutilities.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.webutilities.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore/9.0.0": {
+      "sha512": "wpG+nfnfDAw87R3ovAsUmjr3MZ4tYXf6bFqEPVAIKE6IfPml3DS//iX0DBnf8kWn5ZHSO5oi1m4d/Jf+1LifJQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.xml",
+        "microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/9.0.0": {
+      "sha512": "fnmifFL8KaA4ZNLCVgfjCWhZUFxkrDInx5hR4qG7Q8IEaSiy/6VOSRFyx55oH7MV4y7wM3J3EE90nSpcVBI44Q==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.abstractions/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
+        "microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Analyzers/9.0.0": {
+      "sha512": "Qje+DzXJOKiXF72SL0XxNlDtTkvWWvmwknuZtFahY5hIQpRKO59qnGuERIQ3qlzuq5x4bAJ8WMbgU5DLhBgeOQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.analyzers/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
+        "docs/PACKAGE.md",
+        "microsoft.entityframeworkcore.analyzers.9.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/9.0.0": {
+      "sha512": "Pm4NBnv3aB8O5bBNwWRkL4a/H+3WdgKRKYD93FkR9TrUNb0jfns9JVN5w9WEUsQCm0C69Eg2Y85i8pdmSfaNnQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.9.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
+      "sha512": "Ckb5EDBUNJdFWyajfXzUIMRkhf52fHZOQuuZg/oiu8y7zDCVwD0iHhew6MnThjHmevanpxL3f5ci2TtHQEN6bw==",
+      "type": "package",
+      "path": "microsoft.extensions.apidescription.server/6.0.5",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/Microsoft.Extensions.ApiDescription.Server.props",
+        "build/Microsoft.Extensions.ApiDescription.Server.targets",
+        "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props",
+        "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets",
+        "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+        "microsoft.extensions.apidescription.server.nuspec",
+        "tools/Newtonsoft.Json.dll",
+        "tools/dotnet-getdocument.deps.json",
+        "tools/dotnet-getdocument.dll",
+        "tools/dotnet-getdocument.runtimeconfig.json",
+        "tools/net461-x86/GetDocument.Insider.exe",
+        "tools/net461-x86/GetDocument.Insider.exe.config",
+        "tools/net461-x86/Microsoft.Win32.Primitives.dll",
+        "tools/net461-x86/System.AppContext.dll",
+        "tools/net461-x86/System.Buffers.dll",
+        "tools/net461-x86/System.Collections.Concurrent.dll",
+        "tools/net461-x86/System.Collections.NonGeneric.dll",
+        "tools/net461-x86/System.Collections.Specialized.dll",
+        "tools/net461-x86/System.Collections.dll",
+        "tools/net461-x86/System.ComponentModel.EventBasedAsync.dll",
+        "tools/net461-x86/System.ComponentModel.Primitives.dll",
+        "tools/net461-x86/System.ComponentModel.TypeConverter.dll",
+        "tools/net461-x86/System.ComponentModel.dll",
+        "tools/net461-x86/System.Console.dll",
+        "tools/net461-x86/System.Data.Common.dll",
+        "tools/net461-x86/System.Diagnostics.Contracts.dll",
+        "tools/net461-x86/System.Diagnostics.Debug.dll",
+        "tools/net461-x86/System.Diagnostics.DiagnosticSource.dll",
+        "tools/net461-x86/System.Diagnostics.FileVersionInfo.dll",
+        "tools/net461-x86/System.Diagnostics.Process.dll",
+        "tools/net461-x86/System.Diagnostics.StackTrace.dll",
+        "tools/net461-x86/System.Diagnostics.TextWriterTraceListener.dll",
+        "tools/net461-x86/System.Diagnostics.Tools.dll",
+        "tools/net461-x86/System.Diagnostics.TraceSource.dll",
+        "tools/net461-x86/System.Diagnostics.Tracing.dll",
+        "tools/net461-x86/System.Drawing.Primitives.dll",
+        "tools/net461-x86/System.Dynamic.Runtime.dll",
+        "tools/net461-x86/System.Globalization.Calendars.dll",
+        "tools/net461-x86/System.Globalization.Extensions.dll",
+        "tools/net461-x86/System.Globalization.dll",
+        "tools/net461-x86/System.IO.Compression.ZipFile.dll",
+        "tools/net461-x86/System.IO.Compression.dll",
+        "tools/net461-x86/System.IO.FileSystem.DriveInfo.dll",
+        "tools/net461-x86/System.IO.FileSystem.Primitives.dll",
+        "tools/net461-x86/System.IO.FileSystem.Watcher.dll",
+        "tools/net461-x86/System.IO.FileSystem.dll",
+        "tools/net461-x86/System.IO.IsolatedStorage.dll",
+        "tools/net461-x86/System.IO.MemoryMappedFiles.dll",
+        "tools/net461-x86/System.IO.Pipes.dll",
+        "tools/net461-x86/System.IO.UnmanagedMemoryStream.dll",
+        "tools/net461-x86/System.IO.dll",
+        "tools/net461-x86/System.Linq.Expressions.dll",
+        "tools/net461-x86/System.Linq.Parallel.dll",
+        "tools/net461-x86/System.Linq.Queryable.dll",
+        "tools/net461-x86/System.Linq.dll",
+        "tools/net461-x86/System.Memory.dll",
+        "tools/net461-x86/System.Net.Http.dll",
+        "tools/net461-x86/System.Net.NameResolution.dll",
+        "tools/net461-x86/System.Net.NetworkInformation.dll",
+        "tools/net461-x86/System.Net.Ping.dll",
+        "tools/net461-x86/System.Net.Primitives.dll",
+        "tools/net461-x86/System.Net.Requests.dll",
+        "tools/net461-x86/System.Net.Security.dll",
+        "tools/net461-x86/System.Net.Sockets.dll",
+        "tools/net461-x86/System.Net.WebHeaderCollection.dll",
+        "tools/net461-x86/System.Net.WebSockets.Client.dll",
+        "tools/net461-x86/System.Net.WebSockets.dll",
+        "tools/net461-x86/System.Numerics.Vectors.dll",
+        "tools/net461-x86/System.ObjectModel.dll",
+        "tools/net461-x86/System.Reflection.Extensions.dll",
+        "tools/net461-x86/System.Reflection.Primitives.dll",
+        "tools/net461-x86/System.Reflection.dll",
+        "tools/net461-x86/System.Resources.Reader.dll",
+        "tools/net461-x86/System.Resources.ResourceManager.dll",
+        "tools/net461-x86/System.Resources.Writer.dll",
+        "tools/net461-x86/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/net461-x86/System.Runtime.CompilerServices.VisualC.dll",
+        "tools/net461-x86/System.Runtime.Extensions.dll",
+        "tools/net461-x86/System.Runtime.Handles.dll",
+        "tools/net461-x86/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "tools/net461-x86/System.Runtime.InteropServices.dll",
+        "tools/net461-x86/System.Runtime.Numerics.dll",
+        "tools/net461-x86/System.Runtime.Serialization.Formatters.dll",
+        "tools/net461-x86/System.Runtime.Serialization.Json.dll",
+        "tools/net461-x86/System.Runtime.Serialization.Primitives.dll",
+        "tools/net461-x86/System.Runtime.Serialization.Xml.dll",
+        "tools/net461-x86/System.Runtime.dll",
+        "tools/net461-x86/System.Security.Claims.dll",
+        "tools/net461-x86/System.Security.Cryptography.Algorithms.dll",
+        "tools/net461-x86/System.Security.Cryptography.Csp.dll",
+        "tools/net461-x86/System.Security.Cryptography.Encoding.dll",
+        "tools/net461-x86/System.Security.Cryptography.Primitives.dll",
+        "tools/net461-x86/System.Security.Cryptography.X509Certificates.dll",
+        "tools/net461-x86/System.Security.Principal.dll",
+        "tools/net461-x86/System.Security.SecureString.dll",
+        "tools/net461-x86/System.Text.Encoding.Extensions.dll",
+        "tools/net461-x86/System.Text.Encoding.dll",
+        "tools/net461-x86/System.Text.RegularExpressions.dll",
+        "tools/net461-x86/System.Threading.Overlapped.dll",
+        "tools/net461-x86/System.Threading.Tasks.Parallel.dll",
+        "tools/net461-x86/System.Threading.Tasks.dll",
+        "tools/net461-x86/System.Threading.Thread.dll",
+        "tools/net461-x86/System.Threading.ThreadPool.dll",
+        "tools/net461-x86/System.Threading.Timer.dll",
+        "tools/net461-x86/System.Threading.dll",
+        "tools/net461-x86/System.ValueTuple.dll",
+        "tools/net461-x86/System.Xml.ReaderWriter.dll",
+        "tools/net461-x86/System.Xml.XDocument.dll",
+        "tools/net461-x86/System.Xml.XPath.XDocument.dll",
+        "tools/net461-x86/System.Xml.XPath.dll",
+        "tools/net461-x86/System.Xml.XmlDocument.dll",
+        "tools/net461-x86/System.Xml.XmlSerializer.dll",
+        "tools/net461-x86/netstandard.dll",
+        "tools/net461/GetDocument.Insider.exe",
+        "tools/net461/GetDocument.Insider.exe.config",
+        "tools/net461/Microsoft.Win32.Primitives.dll",
+        "tools/net461/System.AppContext.dll",
+        "tools/net461/System.Buffers.dll",
+        "tools/net461/System.Collections.Concurrent.dll",
+        "tools/net461/System.Collections.NonGeneric.dll",
+        "tools/net461/System.Collections.Specialized.dll",
+        "tools/net461/System.Collections.dll",
+        "tools/net461/System.ComponentModel.EventBasedAsync.dll",
+        "tools/net461/System.ComponentModel.Primitives.dll",
+        "tools/net461/System.ComponentModel.TypeConverter.dll",
+        "tools/net461/System.ComponentModel.dll",
+        "tools/net461/System.Console.dll",
+        "tools/net461/System.Data.Common.dll",
+        "tools/net461/System.Diagnostics.Contracts.dll",
+        "tools/net461/System.Diagnostics.Debug.dll",
+        "tools/net461/System.Diagnostics.DiagnosticSource.dll",
+        "tools/net461/System.Diagnostics.FileVersionInfo.dll",
+        "tools/net461/System.Diagnostics.Process.dll",
+        "tools/net461/System.Diagnostics.StackTrace.dll",
+        "tools/net461/System.Diagnostics.TextWriterTraceListener.dll",
+        "tools/net461/System.Diagnostics.Tools.dll",
+        "tools/net461/System.Diagnostics.TraceSource.dll",
+        "tools/net461/System.Diagnostics.Tracing.dll",
+        "tools/net461/System.Drawing.Primitives.dll",
+        "tools/net461/System.Dynamic.Runtime.dll",
+        "tools/net461/System.Globalization.Calendars.dll",
+        "tools/net461/System.Globalization.Extensions.dll",
+        "tools/net461/System.Globalization.dll",
+        "tools/net461/System.IO.Compression.ZipFile.dll",
+        "tools/net461/System.IO.Compression.dll",
+        "tools/net461/System.IO.FileSystem.DriveInfo.dll",
+        "tools/net461/System.IO.FileSystem.Primitives.dll",
+        "tools/net461/System.IO.FileSystem.Watcher.dll",
+        "tools/net461/System.IO.FileSystem.dll",
+        "tools/net461/System.IO.IsolatedStorage.dll",
+        "tools/net461/System.IO.MemoryMappedFiles.dll",
+        "tools/net461/System.IO.Pipes.dll",
+        "tools/net461/System.IO.UnmanagedMemoryStream.dll",
+        "tools/net461/System.IO.dll",
+        "tools/net461/System.Linq.Expressions.dll",
+        "tools/net461/System.Linq.Parallel.dll",
+        "tools/net461/System.Linq.Queryable.dll",
+        "tools/net461/System.Linq.dll",
+        "tools/net461/System.Memory.dll",
+        "tools/net461/System.Net.Http.dll",
+        "tools/net461/System.Net.NameResolution.dll",
+        "tools/net461/System.Net.NetworkInformation.dll",
+        "tools/net461/System.Net.Ping.dll",
+        "tools/net461/System.Net.Primitives.dll",
+        "tools/net461/System.Net.Requests.dll",
+        "tools/net461/System.Net.Security.dll",
+        "tools/net461/System.Net.Sockets.dll",
+        "tools/net461/System.Net.WebHeaderCollection.dll",
+        "tools/net461/System.Net.WebSockets.Client.dll",
+        "tools/net461/System.Net.WebSockets.dll",
+        "tools/net461/System.Numerics.Vectors.dll",
+        "tools/net461/System.ObjectModel.dll",
+        "tools/net461/System.Reflection.Extensions.dll",
+        "tools/net461/System.Reflection.Primitives.dll",
+        "tools/net461/System.Reflection.dll",
+        "tools/net461/System.Resources.Reader.dll",
+        "tools/net461/System.Resources.ResourceManager.dll",
+        "tools/net461/System.Resources.Writer.dll",
+        "tools/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/net461/System.Runtime.CompilerServices.VisualC.dll",
+        "tools/net461/System.Runtime.Extensions.dll",
+        "tools/net461/System.Runtime.Handles.dll",
+        "tools/net461/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "tools/net461/System.Runtime.InteropServices.dll",
+        "tools/net461/System.Runtime.Numerics.dll",
+        "tools/net461/System.Runtime.Serialization.Formatters.dll",
+        "tools/net461/System.Runtime.Serialization.Json.dll",
+        "tools/net461/System.Runtime.Serialization.Primitives.dll",
+        "tools/net461/System.Runtime.Serialization.Xml.dll",
+        "tools/net461/System.Runtime.dll",
+        "tools/net461/System.Security.Claims.dll",
+        "tools/net461/System.Security.Cryptography.Algorithms.dll",
+        "tools/net461/System.Security.Cryptography.Csp.dll",
+        "tools/net461/System.Security.Cryptography.Encoding.dll",
+        "tools/net461/System.Security.Cryptography.Primitives.dll",
+        "tools/net461/System.Security.Cryptography.X509Certificates.dll",
+        "tools/net461/System.Security.Principal.dll",
+        "tools/net461/System.Security.SecureString.dll",
+        "tools/net461/System.Text.Encoding.Extensions.dll",
+        "tools/net461/System.Text.Encoding.dll",
+        "tools/net461/System.Text.RegularExpressions.dll",
+        "tools/net461/System.Threading.Overlapped.dll",
+        "tools/net461/System.Threading.Tasks.Parallel.dll",
+        "tools/net461/System.Threading.Tasks.dll",
+        "tools/net461/System.Threading.Thread.dll",
+        "tools/net461/System.Threading.ThreadPool.dll",
+        "tools/net461/System.Threading.Timer.dll",
+        "tools/net461/System.Threading.dll",
+        "tools/net461/System.ValueTuple.dll",
+        "tools/net461/System.Xml.ReaderWriter.dll",
+        "tools/net461/System.Xml.XDocument.dll",
+        "tools/net461/System.Xml.XPath.XDocument.dll",
+        "tools/net461/System.Xml.XPath.dll",
+        "tools/net461/System.Xml.XmlDocument.dll",
+        "tools/net461/System.Xml.XmlSerializer.dll",
+        "tools/net461/netstandard.dll",
+        "tools/netcoreapp2.1/GetDocument.Insider.deps.json",
+        "tools/netcoreapp2.1/GetDocument.Insider.dll",
+        "tools/netcoreapp2.1/GetDocument.Insider.runtimeconfig.json",
+        "tools/netcoreapp2.1/System.Diagnostics.DiagnosticSource.dll"
+      ]
+    },
+    "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
+      "sha512": "FPWZAa9c0H4dvOj351iR1jkUIs4u9ykL4Bm592yhjDyO5lCoWd+TMAHx2EMbarzUvCvgjWjJIoC6//Q9kH6YhA==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.abstractions/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Caching.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Caching.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.Caching.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.Caching.Abstractions.xml",
+        "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.xml",
+        "microsoft.extensions.caching.abstractions.9.0.0.nupkg.sha512",
+        "microsoft.extensions.caching.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Caching.Memory/9.0.0": {
+      "sha512": "zbnPX/JQ0pETRSUG9fNPBvpIq42Aufvs15gGYyNIMhCun9yhmWihz0WgsI7bSDPjxWTKBf8oX/zv6v2uZ3W9OQ==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.memory/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Caching.Memory.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Caching.Memory.targets",
+        "lib/net462/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/net462/Microsoft.Extensions.Caching.Memory.xml",
+        "lib/net8.0/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/net8.0/Microsoft.Extensions.Caching.Memory.xml",
+        "lib/net9.0/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/net9.0/Microsoft.Extensions.Caching.Memory.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.xml",
+        "microsoft.extensions.caching.memory.9.0.0.nupkg.sha512",
+        "microsoft.extensions.caching.memory.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/2.1.1": {
+      "sha512": "VfuZJNa0WUshZ/+8BFZAhwFKiKuu/qOUCFntfdLpHj7vcRnsGHqd3G2Hse78DM+pgozczGM63lGPRLmy+uhUOA==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.abstractions/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "microsoft.extensions.configuration.abstractions.2.1.1.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/9.0.0": {
+      "sha512": "MCPrg7v3QgNMr0vX4vzRXvkNGgLg8vKWX0nKCWUxu2uPyMsaRgiRc1tHBnbTcfJMhMKj2slE/j2M9oGkd25DNw==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
+      "sha512": "+6f2qv2a3dLwd5w6JanPIPs47CxRbnk+ZocMJUhv9NxP88VlOcJYZs9jY+MYSjxvady08bUZn6qgiNh7DadGgg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/2.1.1": {
+      "sha512": "UEQB5/QPuLYaCvScZQ9llhcks5xyEUKh41D615FoehRAF9UgGVmXHcCSOH8idHHLRoKm+OJJjEy1oywvuaL33w==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.abstractions/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "microsoft.extensions.fileproviders.abstractions.2.1.1.nupkg.sha512",
+        "microsoft.extensions.fileproviders.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Embedded/2.1.1": {
+      "sha512": "TYyZBm9rxNtXvAK81E53VOxWnEbnbDZVzWjwbvgox5oHMUTm3Blm4p6MyK2Rlj2d/tEMK0ofG4ooUEaKYS8Lpg==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.embedded/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.props",
+        "build/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.targets",
+        "buildMultiTargeting/Microsoft.Extensions.FileProviders.Embedded.props",
+        "buildMultiTargeting/Microsoft.Extensions.FileProviders.Embedded.targets",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.xml",
+        "microsoft.extensions.fileproviders.embedded.2.1.1.nupkg.sha512",
+        "microsoft.extensions.fileproviders.embedded.nuspec",
+        "tasks/net461/Microsoft.Extensions.FileProviders.Embedded.Manifest.Task.dll",
+        "tasks/netstandard1.5/Microsoft.Extensions.FileProviders.Embedded.Manifest.Task.dll"
+      ]
+    },
+    "Microsoft.Extensions.Hosting.Abstractions/2.1.1": {
+      "sha512": "kVVdHnOFJbcXxgZzrT6nwkrWZTHL+47LT59S9J2Jp0BNO3EQWNEZHUUZMb/kKFV7LtW+bp+EuAOPNUqEcqI++Q==",
+      "type": "package",
+      "path": "microsoft.extensions.hosting.abstractions/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.xml",
+        "microsoft.extensions.hosting.abstractions.2.1.1.nupkg.sha512",
+        "microsoft.extensions.hosting.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging/9.0.0": {
+      "sha512": "crjWyORoug0kK7RSNJBTeSE6VX8IQgLf3nUpTB9m62bPXp/tzbnOsnbe8TXEG0AASNaKZddnpHKw7fET8E++Pg==",
+      "type": "package",
+      "path": "microsoft.extensions.logging/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Logging.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.targets",
+        "lib/net462/Microsoft.Extensions.Logging.dll",
+        "lib/net462/Microsoft.Extensions.Logging.xml",
+        "lib/net8.0/Microsoft.Extensions.Logging.dll",
+        "lib/net8.0/Microsoft.Extensions.Logging.xml",
+        "lib/net9.0/Microsoft.Extensions.Logging.dll",
+        "lib/net9.0/Microsoft.Extensions.Logging.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.Logging.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.Logging.xml",
+        "microsoft.extensions.logging.9.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/9.0.0": {
+      "sha512": "g0UfujELzlLbHoVG8kPKVBaW470Ewi+jnptGS9KUi6jcb+k2StujtK3m26DFSGGwQ/+bVgZfsWqNzlP6YOejvw==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn3.11/cs/Microsoft.Extensions.Logging.Generators.dll",
+        "analyzers/dotnet/roslyn3.11/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll",
+        "analyzers/dotnet/roslyn4.0/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Logging.Generators.dll",
+        "analyzers/dotnet/roslyn4.4/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "buildTransitive/net461/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/net462/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.ObjectPool/8.0.0": {
+      "sha512": "4pm+XgxSukskwjzDDfSjG4KNUIOdFF2VaqZZDtTzoyQMOVSnlV6ZM8a9aVu5dg9LVZTB//utzSc8fOi0b0Mb2Q==",
+      "type": "package",
+      "path": "microsoft.extensions.objectpool/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.Extensions.ObjectPool.dll",
+        "lib/net462/Microsoft.Extensions.ObjectPool.xml",
+        "lib/net8.0/Microsoft.Extensions.ObjectPool.dll",
+        "lib/net8.0/Microsoft.Extensions.ObjectPool.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.xml",
+        "microsoft.extensions.objectpool.8.0.0.nupkg.sha512",
+        "microsoft.extensions.objectpool.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Options/9.0.0": {
+      "sha512": "y2146b3jrPI3Q0lokKXdKLpmXqakYbDIPDV6r3M8SqvSf45WwOTzkyfDpxnZXJsJQEpAsAqjUq5Pu8RCJMjubg==",
+      "type": "package",
+      "path": "microsoft.extensions.options/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Options.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn4.4/cs/cs/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/de/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/es/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/fr/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/it/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ja/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ko/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pl/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pt-BR/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ru/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/tr/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hans/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hant/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "buildTransitive/net461/Microsoft.Extensions.Options.targets",
+        "buildTransitive/net462/Microsoft.Extensions.Options.targets",
+        "buildTransitive/net8.0/Microsoft.Extensions.Options.targets",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Options.targets",
+        "buildTransitive/netstandard2.0/Microsoft.Extensions.Options.targets",
+        "lib/net462/Microsoft.Extensions.Options.dll",
+        "lib/net462/Microsoft.Extensions.Options.xml",
+        "lib/net8.0/Microsoft.Extensions.Options.dll",
+        "lib/net8.0/Microsoft.Extensions.Options.xml",
+        "lib/net9.0/Microsoft.Extensions.Options.dll",
+        "lib/net9.0/Microsoft.Extensions.Options.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.Options.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.Options.xml",
+        "microsoft.extensions.options.9.0.0.nupkg.sha512",
+        "microsoft.extensions.options.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/9.0.0": {
+      "sha512": "N3qEBzmLMYiASUlKxxFIISP4AiwuPTHF5uCh+2CWSwwzAJiIYx0kBJsS30cp1nvhSySFAVi30jecD307jV+8Kg==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Primitives.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Primitives.targets",
+        "lib/net462/Microsoft.Extensions.Primitives.dll",
+        "lib/net462/Microsoft.Extensions.Primitives.xml",
+        "lib/net8.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net8.0/Microsoft.Extensions.Primitives.xml",
+        "lib/net9.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net9.0/Microsoft.Extensions.Primitives.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.9.0.0.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.WebEncoders/2.1.1": {
+      "sha512": "XIuJXPNUAX/ZV/onarixNoq3kO7Q9/RXXOY8hhYydsDwHI9PqPeJH6WE3LmPJJDmB+7y3+MT6ZmW78gZZDApBA==",
+      "type": "package",
+      "path": "microsoft.extensions.webencoders/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.WebEncoders.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.WebEncoders.xml",
+        "microsoft.extensions.webencoders.2.1.1.nupkg.sha512",
+        "microsoft.extensions.webencoders.nuspec"
+      ]
+    },
+    "Microsoft.Net.Http.Headers/2.1.1": {
+      "sha512": "lPNIphl8b2EuhOE9dMH6EZDmu7pS882O+HMi5BJNsigxHaWlBrYxZHFZgE18cyaPp6SSZcTkKkuzfjV/RRQKlA==",
+      "type": "package",
+      "path": "microsoft.net.http.headers/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll",
+        "lib/netstandard2.0/Microsoft.Net.Http.Headers.xml",
+        "microsoft.net.http.headers.2.1.1.nupkg.sha512",
+        "microsoft.net.http.headers.nuspec"
+      ]
+    },
+    "Microsoft.OpenApi/1.6.14": {
+      "sha512": "tTaBT8qjk3xINfESyOPE2rIellPvB7qpVqiWiyA/lACVvz+xOGiXhFUfohcx82NLbi5avzLW0lx+s6oAqQijfw==",
+      "type": "package",
+      "path": "microsoft.openapi/1.6.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.6.14.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore/6.6.2": {
+      "sha512": "+NB4UYVYN6AhDSjW0IJAd1AGD8V33gemFNLPaxKTtPkHB+HaKAKf9MGAEUPivEWvqeQfcKIw8lJaHq6LHljRuw==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore/6.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Swashbuckle.AspNetCore.props",
+        "swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+        "swashbuckle.aspnetcore.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.Swagger/6.6.2": {
+      "sha512": "ovgPTSYX83UrQUWiS5vzDcJ8TEX1MAxBgDFMK45rC24MorHEPQlZAHlaXj/yth4Zf6xcktpUgTEBvffRQVwDKA==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swagger/6.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net5.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/net5.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net6.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/net6.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/net7.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net7.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/net7.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "package-readme.md",
+        "swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/6.6.2": {
+      "sha512": "zv4ikn4AT1VYuOsDCpktLq4QDq08e7Utzbir86M5/ZkRaLXbCPF11E1/vTmOiDzRTl0zTZINQU2qLKwTcHgfrA==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggergen/6.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net7.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/net7.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "package-readme.md",
+        "swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/6.6.2": {
+      "sha512": "mBBb+/8Hm2Q3Wygag+hu2jj69tZW5psuv0vMRXY07Wy+Rrj40vRP8ZTbKBhs91r45/HXT4aY4z0iSBYx1h6JvA==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggerui/6.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/net7.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/net7.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "package-readme.md",
+        "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.nuspec"
+      ]
+    },
+    "System.Buffers/4.5.0": {
+      "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
+      "type": "package",
+      "path": "system.buffers/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Diagnostics.DiagnosticSource/9.0.0": {
+      "sha512": "ddppcFpnbohLWdYKr/ZeLZHmmI+DXFgZ3Snq+/E7SwcdW4UnvxmaugkwGywvGVWkHPGCSZjCP+MLzu23AL5SDw==",
+      "type": "package",
+      "path": "system.diagnostics.diagnosticsource/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Diagnostics.DiagnosticSource.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.DiagnosticSource.targets",
+        "content/ILLink/ILLink.Descriptors.LibraryBuild.xml",
+        "contentFiles/any/net462/ILLink/ILLink.Descriptors.LibraryBuild.xml",
+        "contentFiles/any/net8.0/ILLink/ILLink.Descriptors.LibraryBuild.xml",
+        "contentFiles/any/net9.0/ILLink/ILLink.Descriptors.LibraryBuild.xml",
+        "contentFiles/any/netstandard2.0/ILLink/ILLink.Descriptors.LibraryBuild.xml",
+        "lib/net462/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net462/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net8.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net8.0/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net9.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net9.0/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.xml",
+        "system.diagnostics.diagnosticsource.9.0.0.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.IO.Hashing/8.0.0": {
+      "sha512": "ne1843evDugl0md7Fjzy6QjJrzsjh46ZKbhf8GwBXb5f/gw97J4bxMs0NQKifDuThh/f0bZ0e62NPl1jzTuRqA==",
+      "type": "package",
+      "path": "system.io.hashing/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.IO.Hashing.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.IO.Hashing.targets",
+        "lib/net462/System.IO.Hashing.dll",
+        "lib/net462/System.IO.Hashing.xml",
+        "lib/net6.0/System.IO.Hashing.dll",
+        "lib/net6.0/System.IO.Hashing.xml",
+        "lib/net7.0/System.IO.Hashing.dll",
+        "lib/net7.0/System.IO.Hashing.xml",
+        "lib/net8.0/System.IO.Hashing.dll",
+        "lib/net8.0/System.IO.Hashing.xml",
+        "lib/netstandard2.0/System.IO.Hashing.dll",
+        "lib/netstandard2.0/System.IO.Hashing.xml",
+        "system.io.hashing.8.0.0.nupkg.sha512",
+        "system.io.hashing.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.IO.Pipelines/8.0.0": {
+      "sha512": "FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA==",
+      "type": "package",
+      "path": "system.io.pipelines/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.IO.Pipelines.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
+        "lib/net462/System.IO.Pipelines.dll",
+        "lib/net462/System.IO.Pipelines.xml",
+        "lib/net6.0/System.IO.Pipelines.dll",
+        "lib/net6.0/System.IO.Pipelines.xml",
+        "lib/net7.0/System.IO.Pipelines.dll",
+        "lib/net7.0/System.IO.Pipelines.xml",
+        "lib/net8.0/System.IO.Pipelines.dll",
+        "lib/net8.0/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.8.0.0.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Text.Encodings.Web/4.5.0": {
+      "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+      "type": "package",
+      "path": "system.text.encodings.web/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard1.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.4.5.0.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Yarp.ReverseProxy/2.2.0": {
+      "sha512": "t16Z+OplJEElJy1Q6t12EwMGF2BeLw8IKjD1ema7ewbCRaMqeVIRPZo3MlxidnRFRK+tV6II8tKYX+7N5ZS98A==",
+      "type": "package",
+      "path": "yarp.reverseproxy/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net6.0/Yarp.ReverseProxy.dll",
+        "lib/net6.0/Yarp.ReverseProxy.xml",
+        "lib/net7.0/Yarp.ReverseProxy.dll",
+        "lib/net7.0/Yarp.ReverseProxy.xml",
+        "lib/net8.0/Yarp.ReverseProxy.dll",
+        "lib/net8.0/Yarp.ReverseProxy.xml",
+        "yarp.reverseproxy.2.2.0.nupkg.sha512",
+        "yarp.reverseproxy.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "HotChocolate.AspNetCore >= 14.2.0",
+      "HotChocolate.AspNetCore.Voyager >= 10.5.5",
+      "Microsoft.AspNetCore.OpenApi >= 8.0.11",
+      "Microsoft.EntityFrameworkCore >= 9.0.0",
+      "Microsoft.EntityFrameworkCore.InMemory >= 9.0.0",
+      "Swashbuckle.AspNetCore >= 6.6.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\chkho\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\devOps\\Master\\S3\\Architecture orientée services et APIs\\TPs\\BioLab\\materiels-service\\materiels-service\\materiels-service.csproj",
+      "projectName": "materiels-service",
+      "projectPath": "C:\\devOps\\Master\\S3\\Architecture orientée services et APIs\\TPs\\BioLab\\materiels-service\\materiels-service\\materiels-service.csproj",
+      "packagesPath": "C:\\Users\\chkho\\.nuget\\packages\\",
+      "outputPath": "C:\\devOps\\Master\\S3\\Architecture orientée services et APIs\\TPs\\BioLab\\materiels-service\\materiels-service\\obj\\",
+      "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
+      "configFilePaths": [
+        "C:\\Users\\chkho\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "HotChocolate.AspNetCore": {
+            "target": "Package",
+            "version": "[14.2.0, )"
+          },
+          "HotChocolate.AspNetCore.Voyager": {
+            "target": "Package",
+            "version": "[10.5.5, )"
+          },
+          "Microsoft.AspNetCore.OpenApi": {
+            "target": "Package",
+            "version": "[8.0.11, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[6.6.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
