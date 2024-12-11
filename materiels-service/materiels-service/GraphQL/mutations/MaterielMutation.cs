@@ -5,9 +5,9 @@ namespace materiels_service.GraphQL.mutations;
 
 public class MaterielMutation
 {
-    public Materiel AddMateriel(Materiel input, [Service] MaterielService service) => service.AddMateriel(input);
+    public Materiel AddMateriel(Materiel input, [Service] IMaterielService service) => service.AddMateriel(input);
 
-    public Materiel UpdateMateriel(int id, Materiel input, [Service] MaterielService service)
+    public Materiel UpdateMateriel(int id, Materiel input, [Service] IMaterielService service)
     {
         input.Id = id;
         return service.UpdateMateriel(input);

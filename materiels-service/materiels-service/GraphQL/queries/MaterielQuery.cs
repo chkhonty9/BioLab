@@ -5,13 +5,13 @@ namespace materiels_service.GraphQL.queries;
 
 public class MaterielQuery
 {
-    public IQueryable<Materiel?> GetAllMateriels([Service] MaterielService service) => service.GetAllMateriels();
+    public IQueryable<Materiel?> GetAllMateriels([Service] IMaterielService service) => service.GetAllMateriels();
 
-    public Materiel? GetMaterielById(int id, [Service] MaterielService service) => service.GetMaterielById(id);
+    public Materiel? GetMaterielById(int id, [Service] IMaterielService service) => service.GetMaterielById(id);
 
-    public IQueryable<Materiel?> GetMaterielsByDate(DateTime date, [Service] MaterielService service) => service.GetMaterielsByDate(date);
+    public IQueryable<Materiel?> GetMaterielsByDate(DateTime date, [Service] IMaterielService service) => service.GetMaterielsByDate(date);
 
-    public IQueryable<Materiel?> GetMaterielsBySerie(string serie, [Service] MaterielService service) => service.GetMaterielsBySerie(serie);
+    public IQueryable<Materiel?> GetMaterielsBySerie(string serie, [Service] IMaterielService service) => service.GetMaterielsBySerie(serie);
 
-    public IQueryable<Materiel?> GetAvailableMateriels([Service] MaterielService service) => service.GetAvailableMateriels();
+    public IQueryable<Materiel?> GetAvailableMateriels([Service] IMaterielService service) => service.GetAvailableMateriels();
 }

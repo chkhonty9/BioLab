@@ -4,7 +4,7 @@ using materiels_service.entity;
 
 namespace materiels_service.repository;
 
-public class MaterielRepository(ApplicationDbContext context)
+public class MaterielRepository(ApplicationDbContext context) : IMaterielRepository
 {
     public IQueryable<Materiel?> GetAllMateriels() => context.Materiels;
 

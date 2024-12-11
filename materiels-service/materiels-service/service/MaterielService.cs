@@ -3,7 +3,7 @@ using materiels_service.repository;
 
 namespace materiels_service.service;
 
-public class MaterielService(MaterielRepository repository)
+public class MaterielService(IMaterielRepository repository) : IMaterielService
 {
     public IQueryable<Materiel?> GetAllMateriels() => repository.GetAllMateriels();
 
