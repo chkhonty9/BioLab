@@ -1,0 +1,62 @@
+services:
+  # MySQL Database Service
+  db:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=my_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - /opt/data:/var/lib/mysql
+  # .NET Core (Materiels Service)
+  materiels-service:
+    build: ./materiels-service
+    container_name: materiels-service
+    ports:
+      - '5022:5022'
+    environment:
+      - CONNECTION_STRING=Server=db;Database=my_db;User=root;Password=password
+    links:
+      - db
+  # Python Flask (Project Service)
+  project-service:
+    build: ./Poject-Microservice
+    container_name: project-service
+    ports:
+      - '5000:5000'
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_PORT=3306
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=my_db
+    links:
+      - db
+  # NodeJS (Result Service)
+  result-service:
+    build: ./Resultats-Microservice
+    container_name: result-service
+    ports:
+      - "3000:3000"
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_PORT=3306
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=my_db
+    links:
+      - db
+  # Spring Boot (User Service)
+  user-service:
+    build: ./user-service
+    container_name: user-service
+    ports:
+      - '8080:8080'
+    environment:
+      - DB_URL=jdbc:mysql://db:3306/my_db
+      - DB_USERNAME=root
+      - DB_PASSWORD=password
+    links:
+      - db

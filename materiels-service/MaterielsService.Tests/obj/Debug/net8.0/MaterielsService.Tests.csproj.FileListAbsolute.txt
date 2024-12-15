@@ -167,3 +167,12 @@ C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels
 C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\obj\Debug\net8.0\MaterielsService.Tests.pdb
 C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\obj\Debug\net8.0\MaterielsService.Tests.genruntimeconfig.cache
 C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\obj\Debug\net8.0\ref\MaterielsService.Tests.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\MaterielsService.Tests\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll

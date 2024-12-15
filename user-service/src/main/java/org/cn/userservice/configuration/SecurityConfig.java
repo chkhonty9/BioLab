@@ -50,6 +50,7 @@ public class SecurityConfig {
         return http
                 .sessionManagement(s->s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .csrf(c -> c.disable())
+                .authorizeRequests(auth-> auth.requestMatchers("/actuator/**").permitAll())
                 .addFilter(jwtAuthenticationFilter)
                 .build();
     }
