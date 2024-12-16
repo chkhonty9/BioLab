@@ -37,9 +37,9 @@ builder.Services
     .AddType<MaterielType>();
 
 // Add Health Check services
-builder.Services.AddHealthChecks()
-    .AddDbContextCheck<ApplicationDbContext>("Database Health")  // Check the health of the database
-    .AddCheck("Custom Check", () => HealthCheckResult.Healthy("The custom check is OK."));
+builder.Services.AddHealthChecks();
+
+
 
 // Add Swagger for API Documentation (optional)
 builder.Services.AddEndpointsApiExplorer();
@@ -63,7 +63,7 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 // Configure the HTTP request pipeline.
-app.UseHealthChecks("/health");
+app.MapHealthChecks("/health");
 
 // Ensure app runs correctly
 app.Run();
