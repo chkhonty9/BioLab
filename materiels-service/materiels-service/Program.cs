@@ -1,84 +1,74 @@
-using materiels_service.config;
 using materiels_service.data;
 using materiels_service.GraphQL.mutations;
 using materiels_service.GraphQL.queries;
 using materiels_service.GraphQL.types;
 using materiels_service.repository;
 using materiels_service.service;
+using Microsoft.EntityFrameworkCore;
 using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
-using Steeltoe.Extensions.Configuration.Placeholder;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure logging
+builder.Logging.AddConsole();
 
-// Add Steeltoe features for config server and discovery client
-builder.AddPlaceholderResolver(); // For ${..:..} syntax in variables
-builder.AddConfigServer(); // Fetch properties from Spring Cloud Config Server
-builder.Services.Configure<AppConfiguration>(builder.Configuration.GetSection("AppConfiguration"));
-builder.AddDiscoveryClient();    // Enable Eureka Discovery Client
+builder.Configuration.AddConfigServer(new ConfigServerClientSettings
+{
+    Uri = builder.Configuration.GetValue<string>("CONFIG_SERVICE_URL") ?? "http://localhost:9999",
+    Name = "materiels-service",
+}, null);
 
-/*
-// Add services to the container.
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseInMemoryDatabase("MaterielDB")); // For testing with an in-memory database
-    */
+builder.Services.AddDiscoveryClient(builder.Configuration);
 
-// Fetch the connection string from environment variables
-var connectionString = builder.Configuration["database:connection-string"] ?? 
+// Fetch database connection string
+var connectionString = builder.Configuration["database:connection-string"] ??
                        "Server=localhost;Database=my_db;User=root;Password=nano@password";
 
-// Use the connection string to configure DbContext
+// Add MySQL DB context configuration
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
 );
 
-builder.Services.AddControllers();  
-
-// Register repositories and services
+// Add the necessary services
+builder.Services.AddControllers();
 builder.Services.AddScoped<IMaterielRepository, MaterielRepository>();
 builder.Services.AddScoped<IMaterielService, MaterielService>();
 
-// Add GraphQL Server configuration
+// Add GraphQL server configuration
 builder.Services
     .AddGraphQLServer()
     .AddQueryType<MaterielQuery>()
     .AddMutationType<MaterielMutation>()
     .AddType<MaterielType>();
 
-// Add Health Check services
+// Add health check services
 builder.Services.AddHealthChecks();
 
-
-
-// Add Swagger for API Documentation (optional)
+// Add Swagger (optional)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-
-
-app.UseRouting();
-
-// Configure the HTTP request pipeline.
+// Configure middleware (use Swagger in development)
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// GraphQL endpoint mapping
+// Map GraphQL endpoint
 app.MapGraphQL();
 
 // Enable HTTPS redirection
 app.UseHttpsRedirection();
 
+// Map controllers and health check endpoints
 app.MapControllers();
-
-// Configure the HTTP request pipeline.
 app.MapHealthChecks("/health");
 
-// Ensure app runs correctly
+// Enable service discovery
+app.UseDiscoveryClient();
+
 app.Run();

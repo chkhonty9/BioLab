@@ -128,3 +128,17 @@ C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels
 C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Steeltoe.Extensions.Configuration.PlaceholderBase.dll
 C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Steeltoe.Extensions.Configuration.PlaceholderCore.dll
 C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\System.Text.Json.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\devOps\Master\S3\Architecture orientée services et APIs\TPs\BioLab\materiels-service\materiels-service\bin\Debug\net8.0\Steeltoe.Discovery.Eureka.dll

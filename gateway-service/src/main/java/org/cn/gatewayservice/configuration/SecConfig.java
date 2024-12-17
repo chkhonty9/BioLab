@@ -24,7 +24,7 @@ public class SecConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeExchange(auth -> auth
-                        .pathMatchers("/actuator/**", "/USER-SERVICE/actuator/**").permitAll()
+                        .pathMatchers("/actuator/**", "/USER-SERVICE/actuator/**", "/MATERIELS-SERVICE/health").permitAll()
                         .anyExchange().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt());

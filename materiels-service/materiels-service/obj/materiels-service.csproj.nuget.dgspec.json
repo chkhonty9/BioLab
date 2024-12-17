@@ -63,6 +63,14 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.Extensions.Diagnostics.HealthChecks": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -70,6 +78,10 @@
             "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
@@ -80,6 +92,10 @@
               "version": "[8.0.2, )"
             },
             "Steeltoe.Discovery.ClientCore": {
+              "target": "Package",
+              "version": "[3.2.8, )"
+            },
+            "Steeltoe.Discovery.Eureka": {
               "target": "Package",
               "version": "[3.2.8, )"
             },
@@ -94,6 +110,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[7.2.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
             }
           },
           "imports": [
