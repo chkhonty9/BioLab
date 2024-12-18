@@ -4,32 +4,40 @@ using materiels_service.entity;
 
 namespace materiels_service.repository;
 
-public class MaterielRepository(ApplicationDbContext context) : IMaterielRepository
+public class MaterielRepository : IMaterielRepository
 {
-    public IQueryable<Materiel?> GetAllMateriels() => context.Materiels;
+    
+    private readonly ApplicationDbContext _context;
 
-    public Materiel? GetMaterielById(int id) => context.Materiels.FirstOrDefault(m => m.Id == id);
+    public MaterielRepository(ApplicationDbContext context)
+    {
+        _context = context;
+    }
+    
+    public IQueryable<Materiel?> GetAllMateriels() => _context.Materiels;
+
+    public Materiel? GetMaterielById(int id) => _context.Materiels.FirstOrDefault(m => m.Id == id);
 
     public IQueryable<Materiel?> GetMaterielsByDate(DateTime date) => 
-        context.Materiels.Where(m => m.Date == date);
+        _context.Materiels.Where(m => m.Date == date);
 
     public IQueryable<Materiel?> GetMaterielsBySerie(string serie) => 
-        context.Materiels.Where(m => m.Serie.Contains(serie));
+        _context.Materiels.Where(m => m.Serie.Contains(serie));
 
     public IQueryable<Materiel> GetAvailableMateriels()
     {
-        return context.Materiels.Where(m => m.Available == true);
+        return _context.Materiels.Where(m => m.Available == true);
     }
     
     public void AddMateriel(Materiel materiel)
     {
-        context.Materiels.Add(materiel);
-        context.SaveChanges();
+        _context.Materiels.Add(materiel);
+        _context.SaveChanges();
     }
 
     public void UpdateMateriel(Materiel materiel)
     {
-        context.Materiels.Update(materiel);
-        context.SaveChanges();
+        _context.Materiels.Update(materiel);
+        _context.SaveChanges();
     }
 }

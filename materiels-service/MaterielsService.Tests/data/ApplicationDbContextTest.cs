@@ -15,9 +15,13 @@ namespace MaterielsService.Tests.data
         // Constructor to create a unique in-memory database for each test
         public ApplicationDbContextTest()
         {
+            var connectionString = "server=178.16.129.132;port=3307;database=test_db;user=root;password="; // Replace with your test MySQL connection string
+
+            // Set up DbContext options to use MySQL for tests
             _options = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()) // Unique database name for each test
+                .UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)) // Configure MySQL
                 .Options;
+            
         }
 
         [Fact]

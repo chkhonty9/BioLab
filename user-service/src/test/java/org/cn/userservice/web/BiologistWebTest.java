@@ -3,6 +3,7 @@ package org.cn.userservice.web;
 import org.cn.userservice.dto.AdminDTO;
 import org.cn.userservice.dto.BiologistDTO;
 import org.cn.userservice.entity.Admin;
+import org.cn.userservice.service.AdminService;
 import org.cn.userservice.service.BiologistService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,6 +22,8 @@ class BiologistWebTest {
 
     @Mock
     private BiologistService biologistService;
+    @Mock
+    private AdminService adminService;
 
     @InjectMocks
     private BiologistWeb biologistWeb;
@@ -127,9 +130,12 @@ class BiologistWebTest {
     @Test
     void saveBiologist() {
 
+
+        this.adminService.save(this.admin);
+
         when(biologistService.save(biologistDTO)).thenReturn(biologistDTO);
 
-        BiologistDTO result = biologistWeb.saveBiologist(biologistDTO);
+        BiologistDTO result = biologistWeb.saveBiologist(biologistDTO, biologistDTO.getId());
 
         assertNotNull(result);
         assertEquals(biologistDTO, result);

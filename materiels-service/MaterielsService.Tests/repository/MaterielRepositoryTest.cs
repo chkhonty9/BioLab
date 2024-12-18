@@ -16,8 +16,11 @@ public class MaterielRepositoryTest
     public MaterielRepositoryTest()
     {
         // Setup the In-Memory database for testing
+        var connectionString = "server=178.16.129.132;port=3307;database=test_db;user=root;password="; // Replace with your test MySQL connection string
+
+        // Set up DbContext options to use MySQL for tests
         var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseInMemoryDatabase(databaseName: "TestDatabase")
+            .UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)) // Configure MySQL
             .Options;
 
         _context = new ApplicationDbContext(options);

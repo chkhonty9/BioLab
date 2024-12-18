@@ -5,6 +5,7 @@ using materiels_service.GraphQL.types;
 using materiels_service.repository;
 using materiels_service.service;
 using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
 using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
 
@@ -22,13 +23,22 @@ builder.Configuration.AddConfigServer(new ConfigServerClientSettings
 builder.Services.AddDiscoveryClient(builder.Configuration);
 
 // Fetch database connection string
-var connectionString = builder.Configuration["database:connection-string"] ??
-                       "Server=localhost;Database=my_db;User=root;Password=nano@password";
-
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 // Add MySQL DB context configuration
+/*builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
+        .EnableSensitiveDataLogging()
+        .LogTo(Console.WriteLine, LogLevel.Information)
+);*/
+
+// Add MySQL DbContext configuration
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
+        .EnableSensitiveDataLogging()
+        .LogTo(Console.WriteLine, LogLevel.Information)
+        .EnableDetailedErrors()
 );
+
 
 // Add the necessary services
 builder.Services.AddControllers();
@@ -40,7 +50,8 @@ builder.Services
     .AddGraphQLServer()
     .AddQueryType<MaterielQuery>()
     .AddMutationType<MaterielMutation>()
-    .AddType<MaterielType>();
+    .AddType<MaterielType>()
+    .ModifyRequestOptions(options => options.IncludeExceptionDetails = true);
 
 // Add health check services
 builder.Services.AddHealthChecks();

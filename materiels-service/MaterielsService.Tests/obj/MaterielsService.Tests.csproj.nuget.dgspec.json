@@ -57,11 +57,11 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.11, )"
             },
-            "Microsoft.EntityFrameworkCore.InMemory": {
+            "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.11, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -77,7 +77,7 @@
             },
             "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.11, )"
             },
             "Microsoft.Extensions.Http": {
               "target": "Package",
@@ -197,10 +197,6 @@
             "Microsoft.AspNetCore.TestHost": {
               "target": "Package",
               "version": "[8.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[9.0.0, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",

@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.cn.userservice.dto.BiologistDTO;
+import org.cn.userservice.service.AdminService;
 import org.cn.userservice.service.BiologistService;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
@@ -19,6 +20,7 @@ import java.util.List;
 @Slf4j
 public class BiologistWeb {
     private final BiologistService biologistService;
+    private final AdminService adminService;
 
     @QueryMapping
     public List<BiologistDTO> findAllBiologists() {
@@ -51,8 +53,9 @@ public class BiologistWeb {
     }
 
     @MutationMapping
-    public BiologistDTO saveBiologist(@Argument BiologistDTO biologist) {
+    public BiologistDTO saveBiologist(@Argument BiologistDTO biologist, @Argument Long adminID) {
         log.info("controller : Save biologist: {}", biologist);
+        biologist.setAdmin(adminService.findOne(adminID));
         return biologistService.save(biologist);
     }
 

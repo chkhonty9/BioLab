@@ -43,7 +43,6 @@ input BiologistInput {
     email: String!
     label: String!
     role: String!
-    admin: AdminInput!
 }
 
 input AdminInput {
@@ -82,7 +81,7 @@ type Mutation {
     deletePerson(id: ID!): Boolean
 
     # Biologist Mutations
-    saveBiologist(biologist: BiologistInput!): Biologist
+    saveBiologist(biologist: BiologistInput!, adminID: ID!): Biologist
     deleteBiologist(id: ID!): Boolean
     updateBiologist(id: ID!, biologist: BiologistInput!): Biologist
 
