@@ -20,6 +20,7 @@ def fetch_config(service_name):
     try:
         response = requests.get(config_url)
         response.raise_for_status()  # Raise error for non-2xx responses
+        print(f" fetching config: ", response.json())
         return response.json()
     except requests.exceptions.RequestException as e:
         print(f"Error fetching config: {e}")
