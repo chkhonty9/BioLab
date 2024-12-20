@@ -1,15 +1,44 @@
 services:
-  # MySQL Database Service
-  db:
-    image: mysql:8
-    container_name: mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=my_db
+  discovery-service:
+    build: ./discovery-service
+    container_name: discovery-service
     ports:
-      - "3306:3306"
-    volumes:
-      - /opt/data/mysql:/var/lib/mysql
+      - '8761:8761'
+    expose:
+      - '8761'
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8761/actuator/health" ]
+      interval: 10s
+      retries: 4
+  config-service:
+    build: ./config-service
+    container_name: config-service
+    ports:
+      - '9999:9999'
+    expose:
+      - '9999'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9999/actuator/health" ]
+      interval: 10s
+      retries: 4
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+  gateway-service:
+    build: ./gateway-service
+    container_name: gateway-service
+    ports:
+      - '8888:8888'
+    expose:
+      - '8888'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+    depends_on:
+      config-service:
+        condition: service_healthy
   # .NET Core (Materiels Service)
   materiels-service:
     build: ./materiels-service
@@ -17,31 +46,58 @@ services:
     ports:
       - '8081:8081'
     environment:
-      - CONNECTION_STRING=Server=db;Database=my_db;User=root;Password=password
+      - CONNECTION_STRING=Server=db;Database=my_db;User=root;Password=;Port=3307
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8081/health" ]
+      interval: 10s
+      retries: 4
+      depends_on:
+        config-service:
+          condition: service_healthy
   # Python Flask (Project Service)
   project-service:
-    build: ./Poject-Microservice
+    build: ./projet-service
     container_name: project-service
     ports:
       - '5000:5000'
     environment:
-      - MYSQL_HOST=db
-      - MYSQL_PORT=3306
+      - MYSQL_HOST=178.16.129.132
+      - MYSQL_PORT=3307
       - MYSQL_USER=root
-      - MYSQL_PASSWORD=password
+      - MYSQL_PASSWORD=
       - MYSQL_DATABASE=my_db
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:5000/health" ]
+      interval: 10s
+      retries: 4
+      depends_on:
+        config-service:
+          condition: service_healthy
   # NodeJS (Result Service)
   result-service:
-    build: ./Resultats-Microservice
-    container_name: result-service
+    build: ./results-service
+    container_name: results-service
     ports:
       - "3000:3000"
     environment:
-      - MYSQL_HOST=db
-      - MYSQL_PORT=3306
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=my_db
+      - MYSQL_PORT=3307
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=
+      - MYSQL_HOST=178.16.129.132
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:3000/health" ]
+      interval: 10s
+      retries: 4
+      depends_on:
+        config-service:
+          condition: service_healthy
   # Spring Boot (User Service)
   user-service:
     build: ./user-service
@@ -49,6 +105,15 @@ services:
     ports:
       - '8080:8080'
     environment:
-      - DB_URL=jdbc:mysql://db:3306/my_db
+      - DB_URL=jdbc:mysql://178.16.129.132:3306/my_db
       - DB_USERNAME=root
-      - DB_PASSWORD=password
+      - DB_PASSWORD=
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/actuator/health" ]
+      interval: 10s
+      retries: 4
+      depends_on:
+        config-service:
+          condition: service_healthy
