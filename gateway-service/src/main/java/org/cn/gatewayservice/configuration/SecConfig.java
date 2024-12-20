@@ -24,7 +24,17 @@ public class SecConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeExchange(auth -> auth
-                        .pathMatchers("/actuator/**", "/USER-SERVICE/actuator/**", "/MATERIELS-SERVICE/health","/PROJECT-SERVICE/health", "/RESULTS-SERVICE/health").permitAll()
+                        .pathMatchers(
+                                "/actuator/**",
+                                "/USER-SERVICE/actuator/**",
+                                "/USER-SERVICE/login",
+                                "/MATERIELS-SERVICE/health",
+                                "/PROJECT-SERVICE/health",
+                                "/RESULTS-SERVICE/health").permitAll()
+                        .pathMatchers("/USER-SERVICE/**").hasAuthority("ADMIN")
+                        .pathMatchers("/MATERIELS-SERVICE/**").hasAnyAuthority("ADMIN", "BIOLOGIST")
+                        .pathMatchers("/PROJET-SERVICE/**").hasAnyAuthority("ADMIN", "BIOLOGIST")
+                        .pathMatchers("/RESULTS-SERVICE/**").hasAnyAuthority("ADMIN", "BIOLOGIST")
                         .anyExchange().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt());

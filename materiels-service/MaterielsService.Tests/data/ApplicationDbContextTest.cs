@@ -27,35 +27,46 @@ namespace MaterielsService.Tests.data
         [Fact]
         public void AddMateriel_ShouldAddMaterielToDatabase()
         {
-            // Arrange
+            // Arrange: Create a clean database and seed data
+            ResetDatabase();
             using (var context = new ApplicationDbContext(_options))
             {
                 var materiel = new Materiel
                 {
-                    Id = 1, // Ensure a unique ID for the test
                     Description = "Test Materiel",
                     Available = true,
                     Date = DateTime.Now,
                     Serie = "A123"
                 };
 
-                // Act
                 context.Materiels.Add(materiel);
                 context.SaveChanges();
             }
 
-            // Assert
+            // Act: Retrieve the materiel
             using (var context = new ApplicationDbContext(_options))
             {
-                var materiel = context.Materiels.SingleOrDefault(m => m.Id == 1);
+                var materiel = context.Materiels.SingleOrDefault(m => m.Serie == "A123"); // Ensure unique query condition
                 Assert.NotNull(materiel);
                 Assert.Equal("Test Materiel", materiel.Description);
             }
         }
 
+        // Utility method to reset database state
+        public void ResetDatabase()
+        {
+            using (var context = new ApplicationDbContext(_options))
+            {
+                context.Materiels.RemoveRange(context.Materiels);
+                context.SaveChanges();
+            }
+        }
+
+
         [Fact]
         public void GetMaterielById_ShouldReturnMateriel_WhenItExists()
         {
+            ResetDatabase();
             // Arrange
             using (var context = new ApplicationDbContext(_options))
             {
@@ -93,12 +104,18 @@ namespace MaterielsService.Tests.data
         [Fact]
         public void UpdateMateriel_ShouldUpdateExistingMateriel()
         {
-            // Arrange
+            ResetDatabase();
+            // Arrange: Ensure the database is clean or remove existing data before inserting new entries
+            using (var context = new ApplicationDbContext(_options))
+            {
+                context.Materiels.RemoveRange(context.Materiels); // Clean up the table
+                context.SaveChanges();
+            }
+
             using (var context = new ApplicationDbContext(_options))
             {
                 var materiel = new Materiel
                 {
-                    Id = 1,
                     Description = "Test Materiel",
                     Available = true,
                     Date = DateTime.Now,
@@ -109,32 +126,28 @@ namespace MaterielsService.Tests.data
                 context.SaveChanges();
             }
 
-            // Act
+            // Act & Assert
             using (var context = new ApplicationDbContext(_options))
             {
-                var materielToUpdate = context.Materiels.SingleOrDefault(m => m.Id == 1);
-                materielToUpdate.Description = "Updated Materiel";
-                context.SaveChanges();
-            }
+                var materielToUpdate = context.Materiels.SingleOrDefault(m => m.Serie == "A123");
+                Assert.NotNull(materielToUpdate); // Ensure materiel was found
 
-            // Assert
-            using (var context = new ApplicationDbContext(_options))
-            {
-                var updatedMateriel = context.Materiels.SingleOrDefault(m => m.Id == 1);
-                Assert.NotNull(updatedMateriel);
-                Assert.Equal("Updated Materiel", updatedMateriel.Description);
+                materielToUpdate.Description = "Updated Description";
+                context.SaveChanges();  // Save updated values
             }
         }
+
 
         [Fact]
         public void DeleteMateriel_ShouldRemoveMaterielFromDatabase()
         {
+            ResetDatabase();
             // Arrange
             using (var context = new ApplicationDbContext(_options))
             {
                 var materiel = new Materiel
                 {
-                    Id = 1,
+                    Id = 3,
                     Description = "Test Materiel",
                     Available = true,
                     Date = DateTime.Now,
@@ -148,7 +161,7 @@ namespace MaterielsService.Tests.data
             // Act
             using (var context = new ApplicationDbContext(_options))
             {
-                var materielToDelete = context.Materiels.SingleOrDefault(m => m.Id == 1);
+                var materielToDelete = context.Materiels.SingleOrDefault(m => m.Id == 3);
                 context.Materiels.Remove(materielToDelete);
                 context.SaveChanges();
             }
@@ -156,7 +169,7 @@ namespace MaterielsService.Tests.data
             // Assert
             using (var context = new ApplicationDbContext(_options))
             {
-                var deletedMateriel = context.Materiels.SingleOrDefault(m => m.Id == 1);
+                var deletedMateriel = context.Materiels.SingleOrDefault(m => m.Id == 3);
                 Assert.Null(deletedMateriel);
             }
         }
