@@ -32,9 +32,9 @@ public class MaterielRepositoryTest
 
     private void SeedDatabase()
     {
-        // Ensure unique IDs by removing any existing records before seeding
-        _context.Materiels.RemoveRange(_context.Materiels);
-        _context.SaveChanges();
+        // Ensure unique IDs and clean any existing data
+        _context.Database.EnsureDeleted();  // Ensure the database is reset
+        _context.Database.EnsureCreated();  // Recreate the schema
 
         // Add test data with unique Ids
         var materiels = new List<Materiel>
@@ -74,14 +74,14 @@ public class MaterielRepositoryTest
     [Fact]
     public void GetMaterielsByDate_ShouldReturnCorrectMateriels()
     {
-        // Arrange: Ensure the database is clean and seed the database with known data
+        // Arrange: Ensure the database is clean and seed it with data
         var date = DateTime.Now.Date; // Use only the date part
         var materiel1 = new Materiel 
         { 
             Id = 66, 
             Description = "Materiel 1", 
             Available = true, 
-            Date = date, // Ensure the date matches
+            Date = date, 
             Serie = "SerieA" 
         };
     
@@ -90,17 +90,17 @@ public class MaterielRepositoryTest
             Id = 77, 
             Description = "Materiel 2", 
             Available = false, 
-            Date = date.AddDays(-1), // Different date
+            Date = date.AddDays(-1), 
             Serie = "SerieB" 
         };
 
-        // Detach any existing entities that may be tracked in the context
+        // Detach any existing entities tracked by the context before seeding
         foreach (var entity in _context.ChangeTracker.Entries<Materiel>())
         {
             entity.State = EntityState.Detached;
         }
 
-        // Seed data (only if needed for this test)
+        // Add materiels only if needed for the specific test
         _context.Materiels.Add(materiel1);
         _context.Materiels.Add(materiel2);
         _context.SaveChanges();
@@ -109,11 +109,9 @@ public class MaterielRepositoryTest
         var result = _repository.GetMaterielsByDate(date);
 
         // Assert: Verify the Materiels are filtered by the correct date
-        Assert.Equal(1, result.Count()); // Only 1 Materiel with the specified date should match
+        Assert.Single(result);  // Only 1 Materiel with the specified date should match
         Assert.Equal("Materiel 1", result.FirstOrDefault()?.Description); // Verify the name
     }
-
-
 
     [Fact]
     public void GetMaterielsBySerie_ShouldReturnCorrectMateriels()
@@ -123,7 +121,7 @@ public class MaterielRepositoryTest
         var result = _repository.GetMaterielsBySerie(serie);
 
         // Assert: Verify the Materiels are filtered by the correct Serie
-        Assert.Equal(1, result.Count());
+        Assert.Single(result);
         Assert.Equal("Materiel 1", result.FirstOrDefault()?.Description);
     }
 
@@ -146,6 +144,7 @@ public class MaterielRepositoryTest
 
         // Act: Add the new Materiel
         _repository.AddMateriel(newMateriel);
+        _context.SaveChanges();
 
         // Assert: Verify the Materiel was added
         var result = _context.Materiels.SingleOrDefault(m => m.Description == "Materiel 4");
