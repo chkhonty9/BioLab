@@ -1,20 +1,16 @@
 require('dotenv').config();
 const express = require('express');
-const axios = require('axios');
-const Eureka = require('eureka-js-client').Eureka; // Eureka JS Client
-const getConfigFromCloud = require('./config/getConfig');
-const resultRoutes = require('./routes/result.routes');
-const healthCheck = require('./utils/healthCheck');
-const errorHandler = require('./middleware/errorHandler');
-const pool = require('./db/db'); // Import MySQL pool
-const { startEurekaClient } = require('./eureka/eureka-client');
+const resultRoutes = require('./routes/resultRoutes');
 const eurekaHelper = require('./eureka/eureka-helper');
-
+const getConfigFromCloud = require('./config/getConfig');
+const sequelize = require('./config/db');
+const errorHandler = require('./middleware/errorHandler');
+const healthCheck = require('./utils/healthCheck');
 const app = express();
-
-// Middleware to parse incoming JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(errorHandler);
 
 // Start the application and fetch the configuration from Spring Cloud Config Server
 async function startApp() {
@@ -29,41 +25,48 @@ async function startApp() {
         if (config.spring && config.spring.datasource) {
             const datasource = config.spring.datasource;
 
-            process.env.MYSQL_HOST = new URL(datasource.url).host || '178.16.129.132'; // Get MySQL host from URL
-            process.env.MYSQL_USER = datasource.username || 'root';              // MySQL username
-            process.env.MYSQL_PASSWORD = datasource.password || '';              // MySQL password
-            process.env.MYSQL_DATABASE = new URL(datasource.url).pathname.split('/')[1] || 'my_db'; // Extract database name from URL
-            process.env.MYSQL_PORT = new URL(datasource.url).port || '3307';     // MySQL port
+            process.env.MYSQL_HOST = new URL(datasource.url).host || '178.16.129.132'; // MySQL host from URL
+            process.env.MYSQL_USER = datasource.username || 'root';                     // MySQL username
+            process.env.MYSQL_PASSWORD = datasource.password || '';                     // MySQL password
+            process.env.MYSQL_DATABASE = new URL(datasource.url).pathname.split('/')[1] || 'my_db'; // MySQL database name
+            process.env.MYSQL_PORT = new URL(datasource.url).port || '3307';            // MySQL port
 
-            // Optional: Print the values to verify if they are being set correctly
+            // Log database connection details
             console.log(`Connecting to database at ${process.env.MYSQL_HOST}:${process.env.MYSQL_PORT} with username: ${process.env.MYSQL_USER}`);
         }
 
-        // Extract server port from config (fallback to 3000 if not set in config)
+        // Extract server port from config (defaults to 3000 if not set)
         const serverPort = config.server && config.server.port ? config.server.port : 3000;
-        // Log the server port
-        console.log(`Server is running on port ${serverPort}`);
-
+        console.log(`Server will run on port ${serverPort}`);
 
         // Define application routes
-        app.use('/api/results', resultRoutes);  // Define routes for the results
-        app.get('/health', healthCheck);        // Health check route
+        app.use('/api', resultRoutes); // Routes for handling result-related requests
+        app.get('/health', healthCheck);// Health check route
 
-        // Error handling middleware
-        app.use(errorHandler);  // Error handling middleware
-
-        //startEurekaClient();
         // Start the server with the configured port
-        app.listen(serverPort, () => {
-            console.log(`Server running on http://localhost:${serverPort}`);
+        app.listen(serverPort, async () => {
+            try {
+                // Verify and establish a connection to MySQL database
+                await sequelize.authenticate();
+                await sequelize.sync(); // Sync models with the database
+                console.log(`Database connected successfully and server is running on http://localhost:${serverPort}`);
+            } catch (err) {
+                console.error('Unable to connect to the database:', err);
+                process.exit(1); // Exit the application if the database connection fails
+            }
         });
+
+        // Register the service with Eureka if needed
+        eurekaHelper.registerWithEureka('results-service', serverPort);
+
     } catch (error) {
         console.error('Could not fetch configuration:', error);
-        process.exit(1);  // Exit the app if fetching configuration fails
+        process.exit(1); // Exit the app if fetching configuration fails
     }
 }
 
 // Start the app
 startApp();
-eurekaHelper.registerWithEureka('results-service', 3000);
+
+// Export the app for testing
 module.exports = app;
