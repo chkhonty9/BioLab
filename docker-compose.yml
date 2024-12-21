@@ -103,7 +103,7 @@ services:
     build: ./user-service
     container_name: user-service
     ports:
-      - '8080:8080'
+      - '8082:8082'
     environment:
       - DB_URL=jdbc:mysql://178.16.129.132:3306/my_db
       - DB_USERNAME=root
@@ -111,7 +111,7 @@ services:
       - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
       - CONFIG_SERVICE_URL=http://config-service:9999
     healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:8080/actuator/health" ]
+      test: [ "CMD", "curl", "-f", "http://localhost:8082/actuator/health" ]
       interval: 10s
       retries: 4
       depends_on:
