@@ -13,7 +13,7 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 
 public class SecConfig {
 
-    private RsaConfig rsaConfig;
+    private final RsaConfig rsaConfig;
 
     public SecConfig(RsaConfig rsaConfig) {
         this.rsaConfig = rsaConfig;
@@ -31,10 +31,10 @@ public class SecConfig {
                                 "/MATERIELS-SERVICE/health",
                                 "/PROJECT-SERVICE/health",
                                 "/RESULTS-SERVICE/health").permitAll()
-                        .pathMatchers("/USER-SERVICE/**").hasAuthority("ADMIN")
-                        .pathMatchers("/MATERIELS-SERVICE/**").hasAnyAuthority("ADMIN", "BIOLOGIST")
-                        .pathMatchers("/PROJET-SERVICE/**").hasAnyAuthority("ADMIN", "BIOLOGIST")
-                        .pathMatchers("/RESULTS-SERVICE/**").hasAnyAuthority("ADMIN", "BIOLOGIST")
+                        .pathMatchers("/USER-SERVICE/**").hasAuthority("SCOPE_ADMIN")
+                        .pathMatchers("/MATERIELS-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
+                        .pathMatchers("/PROJET-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
+                        .pathMatchers("/RESULTS-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
                         .anyExchange().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt());
