@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: discovery-deploy
+  labels:
+    name: discovery-deploy
+    app: bioLab-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: discovery-pod
+      app: bioLab-app
+  template:
+    metadata:
+      name: discovery-pod
+      labels:
+        name: discovery-pod
+        app: bioLab-app
+    spec:
+      containers:
+        - name: discovery-service
+          image: chkhonty9/discovery-service:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8761
+          readinessProbe:
+            httpGet:
+              port: 8761
+              path: /actuator/health
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 3
+---
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: discovery-service
+  labels:
+    name: discovery-service
+    app: bioLab-app
+spec:
+  type: NodePort
+  ports:
+    - port: 8761
+      targetPort: 8761
+      nodePort: 30001
+  selector:
+    name: discovery-pod
+    app: bioLab-app

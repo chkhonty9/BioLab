@@ -1,20 +1,32 @@
-FROM python:3.12-alpine
+# Use an official Python 3.10 slim image
+FROM python:3.10-slim
 
-# Create and set the working directory
-WORKDIR /app
+# Install necessary build dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    pkg-config \
+    libmariadb-dev \
+    libmariadb-dev-compat \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy only the requirements file first to leverage Docker caching
-COPY requirements.txt .
+# Set the working directory inside the container
+WORKDIR /usr/src/app
 
-# Install dependencies
+# Copy the requirements.txt into the working directory
+COPY requirements.txt ./
+
+# Install Python dependencies from the requirements file
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire application code
+# Optionally: Update the application to import from collections.abc if 'MutableMapping' is used.
+# This approach avoids reliance on modifying installed package files directly.
+
+# If the MutableMapping error happens in your application code, use this solution:
+RUN echo "from collections.abc import MutableMapping" > /usr/src/app/fix_import.py \
+    && python /usr/src/app/fix_import.py
+
+# Copy the rest of the application files
 COPY . .
-COPY .env /app/.env
 
-# Expose the port your application will run on
-EXPOSE 5000
-
-# Specify the command to run on container start
+# Set the default command to run your application
 CMD ["python", "app.py"]

@@ -20,7 +20,9 @@ builder.Configuration.AddConfigServer(new ConfigServerClientSettings
     Name = "materiels-service",
 }, null);
 
+builder.Configuration["Eureka:Client:ServiceUrl"] = builder.Configuration.GetValue<string>("DISCOVERY_SERVICE_URL") ?? "http://localhost:8761/eureka";
 builder.Services.AddDiscoveryClient(builder.Configuration);
+
 
 // Fetch database connection string
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
