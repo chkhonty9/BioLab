@@ -33,9 +33,9 @@ public class SecConfig {
                                 "/MATERIELS-SERVICE/health",
                                 "/PROJECT-SERVICE/health",
                                 "/RESULTS-SERVICE/health").permitAll()
-                        .pathMatchers("/USER-SERVICE/graphql").hasAuthority("SCOPE_ADMIN")
-                        .pathMatchers("/MATERIELS-SERVICE/graphql").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
-                        .pathMatchers("/PROJET-SERVICE/graphql").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
+                        .pathMatchers("/USER-SERVICE/**").hasAuthority("SCOPE_ADMIN")
+                        .pathMatchers("/MATERIELS-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
+                        .pathMatchers("/PROJET-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
                         .pathMatchers("/RESULTS-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
                         .anyExchange().authenticated()
                 )
