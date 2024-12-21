@@ -1,54 +1,56 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: config-deploy
+  name: project-deploy
   labels:
-    name: config-deploy
+    name: project-deploy
     app: bioLab-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: config-pod
+      name: project-pod
       app: bioLab-app
   template:
     metadata:
-      name: config-pod
+      name: project-pod
       labels:
-        name: config-pod
+        name: project-pod
         app: bioLab-app
     spec:
       containers:
-        - name: config-service
-          image: chkhonty9/config-service:latest
+        - name: project-service
+          image: chkhonty9/project-service:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 9999
+            - containerPort: 5000
           readinessProbe:
             httpGet:
-              port: 9999
-              path: /actuator/health
+              port: 5000
+              path: /health
             initialDelaySeconds: 5
             periodSeconds: 5
             failureThreshold: 3
           env:
             - name: DISCOVERY_SERVICE_URL
               value: "discovery-service:8761"
+            - name: CONFIG_SERVICE_URL
+              value: "config-service:9999"
 ---
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: config-service
+  name: project-service
   labels:
-    name: config-service
+    name: project-service
     app: bioLab-app
 spec:
   type: NodePort
   ports:
-    - port: 9999
-      targetPort: 9999
-      nodePort: 30099
+    - port: 5000
+      targetPort: 5000
+      nodePort: 30050
   selector:
-    name: config-pod
+    name: project-pod
     app: bioLab-app

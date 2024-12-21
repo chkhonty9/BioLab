@@ -45,7 +45,7 @@ spec:
   ports:
     - port: 8761
       targetPort: 8761
-      nodePort: 30001
+      nodePort: 30061
   selector:
     name: discovery-pod
     app: bioLab-app
