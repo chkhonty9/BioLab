@@ -1,0 +1,25 @@
+- name: Deploy microservice in Kubernetes
+  hosts: my_server
+  gather_facts: no
+  tasks:
+    - name: Create folder
+      file:
+        path: "/home/nouhaila/deploy"
+        state: directory
+        mode: '0755'
+
+    - name: Copy user-deploy.yaml to target
+      copy:
+        src: "{{ playbook_dir }}/user-deploy.yaml"
+        dest: "/home/nouhaila/deploy/user-deploy.yaml"
+
+    - name: Apply deployment with Kubernetes
+      command: "kubectl apply -f /home/nouhaila/deploy/user-deploy.yaml"
+
+    - name: Validate deployment by checking pods
+      command: "kubectl get pods"
+      register: pod_status
+
+    - name: Display pod status
+      debug:
+        msg: "Pods Status: {{ pod_status.stdout_lines }}"
