@@ -1,24 +1,25 @@
-- name: Deploy microservice dans kubernetes
+- name: Deploy microservice in Kubernetes
   hosts: my_server
   gather_facts: no
   tasks:
-    - name: create folder
-      win_file:
+    - name: Create folder
+      file:
         path: "/home/nouhaila/deploy"
         state: directory
+        mode: '0755'
 
-    - name: Copy file discovery-deploy.yaml
+    - name: Copy discovery-deploy.yaml to target
       copy:
         src: "{{ playbook_dir }}/discovery-deploy.yaml"
         dest: "/home/nouhaila/deploy/discovery-deploy.yaml"
 
-    - name: deployment kubernetes
-      win_command: "kubectl apply -f /home/nouhaila/deploy/discovery-deploy.yaml"
+    - name: Apply deployment with Kubernetes
+      command: "kubectl apply -f /home/nouhaila/deploy/discovery-deploy.yaml"
 
-    - name: Validation deployment
-      win_command: "kubectl get pods"
+    - name: Validate deployment by checking pods
+      command: "kubectl get pods"
       register: pod_status
 
     - name: Display pod status
       debug:
-        msg: "Pods Status: {{ pod_status.stdout }}"
+        msg: "Pods Status: {{ pod_status.stdout_lines }}"
