@@ -33,9 +33,10 @@ spec:
             failureThreshold: 3
           env:
             - name: DISCOVERY_SERVICE_HOST
-              value: discovery-service.default.svc.cluster.local
+              value: discovery-service
             - name: CONFIG_SERVICE_URL
-              value: http://config-service.default.svc.cluster.local:9999
+              value: http://config-service:9999
+
 ---
 ---
 apiVersion: v1
