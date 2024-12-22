@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: materiels-deploy
+  labels:
+    name: materiels-deploy
+    app: bioLab-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: materiels-pod
+      app: bioLab-app
+  template:
+    metadata:
+      name: materiels-pod
+      labels:
+        name: materiels-pod
+        app: bioLab-app
+    spec:
+      containers:
+        - name: materiels-service
+          image: chkhonty9/materiels-service:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8081
+          readinessProbe:
+            httpGet:
+              port: 8081
+              path: /health
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 3
+          env:
+            - name: DISCOVERY_SERVICE_URL
+              value: "discovery-service:8761"
+            - name: CONFIG_SERVICE_URL
+              value: "config-service:9999"
+---
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: materiels-service
+  labels:
+    name: materiels-service
+    app: bioLab-app
+spec:
+  type: NodePort
+  ports:
+    - port: 8081
+      targetPort: 8081
+      nodePort: 30081
+  selector:
+    name: materiels-pod
+    app: bioLab-app

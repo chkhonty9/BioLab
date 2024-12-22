@@ -62,10 +62,10 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             role.add(a.getAuthority());
         });
 
-        String spaceDelimitedScopes = role.stream()
+        /*String spaceDelimitedScopes = role.stream()
                 // Possibly remove "ROLE_" prefix
                 .map(r -> r.replace("ROLE_", ""))
-                .collect(Collectors.joining(" "));
+                .collect(Collectors.joining(" "));*/
 
         JwtClaimsSet jwtClaimSet_Access_Token = JwtClaimsSet.builder()
                 .issuer(request.getRequestURI())
@@ -74,7 +74,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .expiresAt(Instant.now().plus(4, ChronoUnit.MINUTES))
                 .claim("email", springUser.getUsername())
                 //.claim("scope", role)
-                .claim("scope", spaceDelimitedScopes)
+                .claim("scope", role)
                 .build();
         String Access_Token = jwtEncoder.encode(JwtEncoderParameters.from(jwtClaimSet_Access_Token)).getTokenValue();
 
@@ -85,7 +85,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .expiresAt(Instant.now().plus(15, ChronoUnit.MINUTES))
                 .claim("email", springUser.getUsername())
                 //.claim("scope", role)
-                .claim("scope", spaceDelimitedScopes)
+                .claim("scope", role)
                 .build();
         String Refresh_Token = jwtEncoder.encode(JwtEncoderParameters.from(jwtClaimsSet_Refresh_Token)).getTokenValue();
         response.addHeader("Authorization", "Bearer " + Access_Token);
