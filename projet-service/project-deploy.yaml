@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: project-service
-          image: chkhonty9/project-service:latest
+          image: chkhonty9/biolab-project:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
@@ -36,6 +36,7 @@ spec:
               value: "http://discovery-service:8761"
             - name: CONFIG_SERVICE_URL
               value: "http://config-service:9999"
+
 ---
 ---
 apiVersion: v1

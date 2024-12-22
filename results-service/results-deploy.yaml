@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: results-service
-          image: chkhonty9/results-service:latest
+          image: chkhonty9/biolab-results:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000

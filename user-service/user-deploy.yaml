@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: chkhonty9/user-service:latest
+          image: chkhonty9/biolab-user:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8082

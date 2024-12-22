@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: discovery-service
-          image: chkhonty9/discovery-service:latest
+          image: chkhonty9/biolab-discovery:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8761
