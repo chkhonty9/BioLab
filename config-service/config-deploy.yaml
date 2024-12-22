@@ -33,7 +33,7 @@ spec:
             failureThreshold: 3
           env:
             - name: DISCOVERY_SERVICE_URL
-              value: "discovery-service:8761"
+              value: "http://discovery-service:8761"
 ---
 ---
 apiVersion: v1
