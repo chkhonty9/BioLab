@@ -47,10 +47,11 @@ metadata:
     name: results-service
     app: bioLab-app
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - port: 3000
       targetPort: 3000
+      nodePort: 30030
   selector:
     name: results-pod
     app: bioLab-app
