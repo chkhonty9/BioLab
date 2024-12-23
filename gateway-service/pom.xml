@@ -83,6 +83,7 @@
             <artifactId>spring-cloud-starter-kubernetes-client-loadbalancer</artifactId>
         </dependency>
 
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
