@@ -9,7 +9,7 @@ exports.registerWithEureka = function(appName, PORT) {
     const client = new Eureka({
         instance: {
             app: appName,
-            hostName: 'localhost',
+            hostName: hostName,
             ipAddr: ipAddr,
             port: {
                 '$': PORT,
