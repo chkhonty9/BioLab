@@ -15,6 +15,7 @@ pymysql.install_as_MySQLdb()
 
 app = Flask(__name__)
 
+
 # ======================
 # Fetching Configuration for the Service (Dynamic)
 # ======================
@@ -30,6 +31,7 @@ def fetch_config(service_name):
         print(f"Error fetching config: {e}")
         return {}
 
+
 # ======================
 # Eureka Service Registration
 # ======================
@@ -39,10 +41,10 @@ eureka_server_url = os.getenv('DISCOVERY_SERVICE_URL', 'http://localhost:8761/eu
 
 # Initialize Eureka client
 eureka_client.init(
-    app_name="project-service",           # Register with Eureka using service name
+    app_name="project-service",  # Register with Eureka using service name
     eureka_server=eureka_server_url,  # Use the Eureka server URL from the configuration
     instance_port=5000,
-    instance_host='localhost',
+    instance_host='localhost'
 )
 
 # ======================
@@ -80,4 +82,4 @@ if __name__ == "__main__":
     # Use the app context to create tables
     with app.app_context():
         db.create_all()  # Ensures tables are created before querying
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='0.0.0.0', debug=True)
