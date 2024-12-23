@@ -2,7 +2,6 @@ package org.cn.gatewayservice.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.oauth2.jwt.NimbusReactiveJwtDecoder;
@@ -32,16 +31,21 @@ public class SecConfig {
                                 "/USER-SERVICE/login",
                                 "/MATERIELS-SERVICE/health",
                                 "/PROJECT-SERVICE/health",
-                                "/RESULTS-SERVICE/health").permitAll()
+                                "/RESULTS-SERVICE/health",
+                                "/favicon.ico"  // Allow favicon request without authentication
+                        ).permitAll()
                         .pathMatchers("/USER-SERVICE/**").hasAuthority("SCOPE_ADMIN")
                         .pathMatchers("/MATERIELS-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
                         .pathMatchers("/PROJET-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
                         .pathMatchers("/RESULTS-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
                         .anyExchange().authenticated()
                 )
-                .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
+                .oauth2ResourceServer(oauth2 -> oauth2.jwt());
+
         return http.build();
     }
+
+
 
 
     @Bean
