@@ -1,22 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gateway-deploy
-  labels:
-    name: gateway-deploy
-    app: bioLab-app
+  name: gateway-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: gateway-pod
-      app: bioLab-app
+      app: gateway-service
   template:
     metadata:
-      name: gateway-pod
       labels:
-        name: gateway-pod
-        app: bioLab-app
+        app: gateway-service
     spec:
       containers:
         - name: gateway-service
@@ -42,9 +36,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: gateway-service
-  labels:
-    name: gateway-service
-    app: bioLab-app
 spec:
   type: LoadBalancer
   ports:
@@ -52,5 +43,4 @@ spec:
       targetPort: 8888
       nodePort: 30088
   selector:
-    name: gateway-pod
-    app: bioLab-app
+    app: gateway-service
