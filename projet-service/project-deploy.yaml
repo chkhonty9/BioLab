@@ -50,7 +50,6 @@ spec:
   ports:
     - port: 5000
       targetPort: 5000
-      nodePort: 30050
   selector:
     name: project-pod
     app: bioLab-app
