@@ -1,22 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project-deploy
-  labels:
-    name: project-deploy
-    app: bioLab-app
+  name: project-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: project-pod
-      app: bioLab-app
+      app: project-service
   template:
     metadata:
-      name: project-pod
       labels:
-        name: project-pod
-        app: bioLab-app
+        app: project-service
     spec:
       containers:
         - name: project-service
@@ -42,9 +36,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: project-service
-  labels:
-    name: project-service
-    app: bioLab-app
 spec:
   type: LoadBalancer
   ports:
@@ -52,5 +43,4 @@ spec:
       targetPort: 5000
       nodePort: 30050
   selector:
-    name: project-pod
-    app: bioLab-app
+    app: project-service
