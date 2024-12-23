@@ -31,8 +31,7 @@ public class SecConfig {
                                 "/USER-SERVICE/login",
                                 "/MATERIELS-SERVICE/health",
                                 "/PROJECT-SERVICE/health",
-                                "/RESULTS-SERVICE/health",
-                                "/favicon.ico"  // Allow favicon request without authentication
+                                "/RESULTS-SERVICE/health"
                         ).permitAll()
                         .pathMatchers("/USER-SERVICE/**").hasAuthority("SCOPE_ADMIN")
                         .pathMatchers("/MATERIELS-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
