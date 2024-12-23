@@ -46,7 +46,7 @@ metadata:
     name: gateway-service
     app: bioLab-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 8888
       targetPort: 8888

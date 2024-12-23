@@ -41,7 +41,7 @@ metadata:
     name: discovery-service
     app: bioLab-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 8761
       targetPort: 8761

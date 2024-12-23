@@ -45,7 +45,7 @@ metadata:
     name: config-service
     app: bioLab-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 9999
       targetPort: 9999
