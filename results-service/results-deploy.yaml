@@ -15,7 +15,7 @@ spec:
       containers:
         - name: results-service
           image: chkhonty9/biolab-result:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
           readinessProbe:

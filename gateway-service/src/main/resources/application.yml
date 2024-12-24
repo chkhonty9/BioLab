@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: r1
+          uri: http://user-service:8082
+          predicates:
+            - Path=/users/**
+        - id: r2
+          uri: http://materiels-service:8081
+          predicates:
+            - Path=/materiels/**
+        - id: r3
+          uri: http://results-service:3000
+          predicates:
+            - Path=/results/**
+        - id: r4
+          uri: http://project-service:5000
+          predicates:
+            - Path=/project/**
+  application:
+    name: gateway-service
+
+server:
+    port: 8888

@@ -15,7 +15,7 @@ spec:
       containers:
         - name: user-service
           image: chkhonty9/biolab-user:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8082
           readinessProbe:

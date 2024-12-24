@@ -15,7 +15,7 @@ spec:
       containers:
         - name: project-service
           image: chkhonty9/biolab-project:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
           readinessProbe:
