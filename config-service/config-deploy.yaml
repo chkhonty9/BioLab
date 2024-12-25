@@ -15,7 +15,7 @@ spec:
       containers:
         - name: config-service
           image: chkhonty9/biolab-config:latest
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9999
           readinessProbe:

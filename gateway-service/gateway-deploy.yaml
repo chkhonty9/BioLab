@@ -15,7 +15,7 @@ spec:
       containers:
         - name: gateway-service
           image: chkhonty9/biolab-gateway:latest
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8888
           readinessProbe:
