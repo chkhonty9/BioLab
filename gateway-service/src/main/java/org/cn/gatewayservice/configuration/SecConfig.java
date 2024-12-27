@@ -2,6 +2,7 @@ package org.cn.gatewayservice.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
@@ -34,10 +35,11 @@ public class SecConfig {
                                 "/PROJECT-SERVICE/health",
                                 "/RESULTS-SERVICE/health"
                         ).permitAll()
-                        .pathMatchers("/USER-SERVICE/**", "/users/**").hasAuthority("SCOPE_ADMIN")
-                        .pathMatchers("/MATERIELS-SERVICE/**", "/materiels/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
-                        .pathMatchers("/PROJET-SERVICE/**", "/project/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
-                        .pathMatchers("/RESULTS-SERVICE/**", "/results/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
+                        .pathMatchers("/USER-SERVICE/**").hasAuthority("SCOPE_ADMIN")
+                        .pathMatchers("/MATERIELS-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
+                        .pathMatchers(HttpMethod.POST,"/MATERIELS-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN")
+                        .pathMatchers("/PROJET-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
+                        .pathMatchers("/RESULTS-SERVICE/**").hasAnyAuthority("SCOPE_ADMIN", "SCOPE_BIOLOGIST")
                         .anyExchange().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
