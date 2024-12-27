@@ -40,4 +40,15 @@ public class MaterielRepository : IMaterielRepository
         _context.Materiels.Update(materiel);
         _context.SaveChanges();
     }
+    
+    public void DeleteMateriel(int id)
+    {
+        var materiel = _context.Materiels.FirstOrDefault(m => m.Id == id);
+        if (materiel != null)
+        {
+            _context.Materiels.Remove(materiel);
+            _context.SaveChanges();
+        }
+    }
+    
 }

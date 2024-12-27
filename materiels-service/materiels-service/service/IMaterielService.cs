@@ -11,4 +11,5 @@ public interface IMaterielService
     IQueryable<Materiel?> GetAvailableMateriels();
     Materiel AddMateriel(Materiel materiel);
     Materiel UpdateMateriel(Materiel materiel);
+    public void DeleteMateriel(int id);
 }

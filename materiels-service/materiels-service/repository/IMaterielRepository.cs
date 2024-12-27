@@ -11,4 +11,6 @@ public interface IMaterielRepository
     IQueryable<Materiel> GetAvailableMateriels();
     void  AddMateriel(Materiel materiel);
     void  UpdateMateriel(Materiel materiel);
+    public void DeleteMateriel(int id);
+
 }

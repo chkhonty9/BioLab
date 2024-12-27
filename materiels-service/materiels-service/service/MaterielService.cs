@@ -26,4 +26,9 @@ public class MaterielService(IMaterielRepository repository) : IMaterielService
         repository.UpdateMateriel(materiel);
         return materiel;
     }
+    
+    public void DeleteMateriel(int id)
+    {
+        repository.DeleteMateriel(id);
+    }
 }

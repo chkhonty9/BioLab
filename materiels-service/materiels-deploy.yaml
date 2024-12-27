@@ -15,7 +15,7 @@ spec:
       containers:
         - name: materiels-service
           image: chkhonty9/biolab-materiels:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8081
           readinessProbe:

@@ -105,10 +105,34 @@ namespace materiels_service.controllers
                 return NotFound($"Materiel with ID {id} not found.");
             }
 
-            updatedMateriel.Id = existingMateriel.Id; // Ensure the ID stays the same
-            var updated = _materielService.UpdateMateriel(updatedMateriel);
+            // Update only the properties that should change
+            existingMateriel.Id = updatedMateriel.Id;
+            existingMateriel.Available = updatedMateriel.Available;
+            existingMateriel.Date = updatedMateriel.Date;
+            existingMateriel.Description = updatedMateriel.Description;
+            existingMateriel.Serie = updatedMateriel.Serie;
+
+           // Perform the update using the service
+            var updated = _materielService.UpdateMateriel(existingMateriel);
 
             return Ok(updated);
         }
+        
+        // DELETE: api/materiel/{id}
+        [HttpDelete("{id}")]
+        public IActionResult DeleteMateriel(int id)
+        {
+            var existingMateriel = _materielService.GetMaterielById(id);
+            if (existingMateriel == null)
+            {
+                return NotFound($"Materiel with ID {id} not found.");
+            }
+
+            _materielService.DeleteMateriel(id);
+
+            return NoContent();
+        }
+        
+        
     }
 }
