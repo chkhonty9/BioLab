@@ -106,7 +106,7 @@ namespace materiels_service.controllers
             }
 
             // Update only the properties that should change
-            existingMateriel.Id = updatedMateriel.Id;
+            //existingMateriel.Id = updatedMateriel.Id;
             existingMateriel.Available = updatedMateriel.Available;
             existingMateriel.Date = updatedMateriel.Date;
             existingMateriel.Description = updatedMateriel.Description;
